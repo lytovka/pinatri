@@ -1,63 +1,66 @@
 <template>
   <div class="background-pattern">
-
     <div class="wrapper-menu">
       <svg
         viewBox="0 0 1484 632"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
       >
         <defs>
           <path
             id="curve"
+            ref="curve"
             d="M 0 316 A 742 316 0 1 1 1484 316 A 742 316 0 1 1 0 316 Z M 0 316 A 742 316 0 1 1 1484 316 A 742 316 0 1 1 0 316 Z"
           />
         </defs>
         <use xlink:href="#curve" fill="none" />
-        <text
-          font-size="1.84375rem"
-          letter-spacing="1px"
-          fill="white"
-          dy="1.28rem"
-          textLength="302%"
-        >
-          <textPath dominant-baseline="hanging" xlink:href="#curve">
-            <a class="menu-link" href="#1">
-              герои быта
-              <tspan dominant-baseline="mathematical" font-size="100px">&#8226;</tspan>
-            </a>
+        <text dy="30" font-size="1.84375rem" letter-spacing="1px" fill="white" textLength="302%">
+          <textPath class="menu-animation" xlink:href="#curve">
+            <a class="menu-link" href="#1">герои быта</a>
+            <tspan dy="20" class="menu-dot" font-size="100px">&#8226;</tspan>
+
             <a class="menu-link" href="#2">
-              разный навсегда
-              <tspan dominant-baseline="mathematical" font-size="100px">&#8226;</tspan>
+              <tspan dy="-20">p</tspan>азный навсегда
             </a>
+            <tspan dy="20" font-size="100px">&#8226;</tspan>
+
             <a class="menu-link" href="#3">
-              на новенького
-              <tspan dominant-baseline="mathematical" font-size="100px">&#8226;</tspan>
+              <tspan dy="-20">н</tspan>а новенького
             </a>
+            <tspan dy="20" font-size="100px">&#8226;</tspan>
+
             <a class="menu-link" href="#4">
-              проделки путешественника
-              <tspan dominant-baseline="mathematical" font-size="100px">&#8226;</tspan>
+              <tspan dy="-20">п</tspan>роделки путешественника
             </a>
+            <tspan dy="20" font-size="100px">&#8226;</tspan>
+
             <a class="menu-link" href="#5">
-              масловка
-              <tspan dominant-baseline="mathematical" font-size="100px">&#8226;</tspan>
+              <tspan dy="-20">м</tspan>асловка
             </a>
-            <a class="menu-link" href="#6">
-              не про то
-              <tspan dominant-baseline="mathematical" font-size="100px">&#8226;</tspan>
-            </a>
+            <tspan dy="20" font-size="100px">&#8226;</tspan>
+
+            <!-- <a class="menu-link" href="#6"> -->
+            <router-link to="/page-one" tag="a">
+              <tspan dy="-20">н</tspan>е про то
+            </router-link>
+            <!-- </a> -->
+            <tspan dy="20" font-size="100px">&#8226;</tspan>
+
             <a class="menu-link" href="#7">
-              бросающий камни или камни саваоф
-              <tspan dominant-baseline="mathematical" font-size="100px">&#8226;</tspan>
+              <tspan dy="-20">б</tspan>росающий камни или камни саваоф
             </a>
+            <tspan dy="20" font-size="100px">&#8226;</tspan>
+
             <a class="menu-link" href="#8">
-              как я ем собак
-              <tspan dominant-baseline="mathematical" font-size="100px">&#8226;</tspan>
+              <tspan dy="-20">к</tspan>ак я ем собак
             </a>
+            <tspan dy="20" font-size="100px">&#8226;</tspan>
+
             <a class="menu-link" href="#9">
-              моё богатство — люди
-              <tspan dominant-baseline="mathematical" font-size="100px">&#8226;</tspan>
+              <tspan dy="-20">м</tspan>оё богатство — люди
             </a>
+            <tspan dy="20" font-size="100px">&#8226;</tspan>
 
             <animate
               attributeName="startOffset"
@@ -98,16 +101,34 @@
 
 <script>
 export default {
-  name: "HelloWorld"
+  name: "HelloWorld",
+  data() {
+    return {
+      // so: 0,
+    };
+  },
+  methods: {
+    // animateMenu() {
+    //   requestAnimationFrame(animateMenu);
+    //   const curve = this.$refs.curve;
+    //   curve.setAttributeNS(null, "startOffset", this.so + "%");
+    //   if (this.so >= 50) {
+    //     this.so = 0;
+    //   }
+    //   this.so += 0.02;
+    //   return this.so
+    // }
+  }
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+
 body {
   overflow: hidden;
   background-color: #212121;
-  font-family: 'lighthaus';
+  font-family: "lighthaus";
+  box-sizing: border-box;
 }
 
 .background-pattern {
@@ -135,6 +156,19 @@ body {
   right: 11.35%;
   top: 20.74%;
   bottom: 20.74%;
+}
+
+.menu-animation {
+  transition: transformator 30s infinite;
+}
+
+@keyframes transformator {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(1000px);
+  }
 }
 
 .container-video {
