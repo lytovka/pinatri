@@ -1,6 +1,6 @@
 export default {
     state: {
-        page: false
+        page: true
     },
     mutations: {
         changePageStatus: (state, payload) => {
@@ -8,7 +8,7 @@ export default {
         }
     },
     actions: {
-        changePageStatus: (context, payload) =>{
+        changePageStatus: (context, payload) => {
             context.commit('changePageStatus', payload);
         }
     },

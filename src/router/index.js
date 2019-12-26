@@ -20,7 +20,10 @@ export default new Router({
     {
       path: '/',
       name: 'StartPage',
-      component: StartPage
+      component: StartPage,
+      // beforeRouteLeave: (to, from, next) =>{
+      //   console.log('13981239819');
+      // }
     },
     {
       path: '/chapter-one',

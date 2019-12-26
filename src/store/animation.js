@@ -4,11 +4,11 @@ export default {
     },
     mutations: {
         changeAnimationStatus: (state, payload) => {
-            state.animation = !payload
+            state.animation = payload
         }
     },
     actions: {
-        changeAnimationStatus: (context, payload) =>{
+        changeAnimationStatus: (context, payload) => {
             context.commit('changeAnimationStatus', payload);
         }
     },

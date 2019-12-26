@@ -17,7 +17,12 @@
         <use xlink:href="#curve" fill="none" />
         <text dy="30" font-size="1.84375rem" letter-spacing="1px" fill="white" textLength="302%">
           <textPath class="menu-animation" xlink:href="#curve">
-            <router-link to="/chapter-four" tag="a" fill="white">герои быта</router-link>
+            <router-link
+              @click.native="clickMenuTab"
+              :to="{name: 'ChapterFour'}"
+              tag="a"
+              fill="white"
+            >герои быта</router-link>
             <bullet-character />
 
             <menu-link menuLinkName="разный навсегда" menuLinkEndpointName="/chapter-five" />
@@ -79,7 +84,9 @@ export default {
   },
   methods: {
     clickMenuTab() {
-      console.log("12345");
+      console.log('nav link is not called yet', this.$store.getters.isPageCalled);
+      this.$store.dispatch("changePageStatus", false);
+      console.log("nav link is clicked", this.$store.getters.isPageCalled);
     }
   }
 };
