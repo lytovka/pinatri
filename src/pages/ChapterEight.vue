@@ -1,12 +1,12 @@
 <template>
     <div>
-        <h1>Hello</h1>
+        <h1>page 8</h1>
     </div>
 </template>
 
 <script>
 export default {
-    name:"PageOne",
+    name:"ChapterEight",
     data(){
         return{}
     }

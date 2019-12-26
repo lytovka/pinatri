@@ -1,7 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import PageOne from '@/components/PageOne'
+import StartPage from '@/pages/StartPage'
+import ChapterOne from '@/pages/ChapterOne'
+import ChapterTwo from '@/pages/ChapterTwo'
+import ChapterThree from '@/pages/ChapterThree'
+import ChapterFour from '@/pages/ChapterFour'
+import ChapterFive from '@/pages/ChapterFive'
+import ChapterSix from '@/pages/ChapterSix'
+import ChapterSeven from '@/pages/ChapterSeven'
+import ChapterEight from '@/pages/ChapterEight'
+import ChapterNine from '@/pages/ChapterNine'
 
 
 Vue.use(Router)
@@ -11,15 +19,53 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'StartPage',
+      component: StartPage
     },
     {
-      path: '/page-one',
-      name: 'PageOne',
-      component: PageOne
+      path: '/chapter-one',
+      name: 'ChapterOne',
+      component: ChapterOne
+    },
+    {
+      path: '/chapter-two',
+      name: 'ChapterTwo',
+      component: ChapterTwo
+    },
+    {
+      path: '/chapter-three',
+      name: 'ChapterThree',
+      component: ChapterThree
+    },
+    {
+      path: '/chapter-four',
+      name: 'ChapterFour',
+      component: ChapterFour
+    },
+    {
+      path: '/chapter-five',
+      name: 'ChapterFive',
+      component: ChapterFive
+    },
+    {
+      path: '/chapter-six',
+      name: 'ChapterSix',
+      component: ChapterSix
+    },
+    {
+      path: '/chapter-Seven',
+      name: 'ChapterSeven',
+      component: ChapterSeven
+    },
+    {
+      path: '/chapter-eight',
+      name: 'ChapterEight',
+      component: ChapterEight
+    },
+    {
+      path: '/chapter-Nine',
+      name: 'ChapterNine',
+      component: ChapterNine
     }
-  ],
-  linkActiveClass: "active", // active class for non-exact links.
-  linkExactActiveClass: "active"
+  ]
 })

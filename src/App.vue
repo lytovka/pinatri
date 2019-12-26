@@ -1,20 +1,19 @@
 <template>
   <div id="app">
-    <!-- <StartMenu /> -->
-    <router-view/>
+    <Navigation />
+    <router-view />
   </div>
 </template>
 
 <script>
-// import StartMenu from './components/HelloWorld';
+import Navigation from "./components/Navigation";
 export default {
-  name: 'App',
-  // components:{
-  //   StartMenu
-  // }
-}
+  name: "App",
+  components: {
+    Navigation
+  }
+};
 </script>
 
 <style>
-
 </style>
