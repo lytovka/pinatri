@@ -1,7 +1,7 @@
 <template>
-  <div class="wrapper-video">
+  <div class="wrapper-ellipse">
     <svg
-      class="container-video"
+      class="container-ellipse"
       viewBox="0 0 1484 632"
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -16,21 +16,32 @@
           />
         </pattern>
       </defs>
-      <ellipse rx="742" ry="316" cx="742" cy="316" fill="url(#image)" />
-      <use xlink:href="#curve-video" fill="white" />
+      <ellipse @click="animateStartPageEllipse" rx="742" ry="316" cx="742" cy="316" fill="url(#image)" />
+      <use xlink:href="#curve-ellipse" fill="white" />
     </svg>
   </div>
 </template>
 
 <script>
 export default {
-  name: "StartPageEllipse"
+  name: "StartPageEllipse",
+  data() {
+    return {};
+  },
+  methods: {
+    animateStartPageEllipse() {
+      console.log(
+        "ellipse is clicked",
+        "page:",
+        this.$store.getters.isPageCalled
+      );
+    }
+  }
 };
 </script>
 
 <style>
-
-.wrapper-video {
+.wrapper-ellipse {
   position: absolute;
   z-index: 1;
   left: 11.35%;
@@ -39,7 +50,7 @@ export default {
   bottom: 20.74%;
 }
 
-.container-video {
+.container-ellipse {
   transform-origin: center;
   -moz-transform-origin: center;
   -webkit-transform-origin: center;
@@ -106,5 +117,4 @@ export default {
     transform: rotate(40.86deg);
   }
 }
-
 </style>

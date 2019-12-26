@@ -17,24 +17,19 @@
         <use xlink:href="#curve" fill="none" />
         <text dy="30" font-size="1.84375rem" letter-spacing="1px" fill="white" textLength="302%">
           <textPath class="menu-animation" xlink:href="#curve">
-
-            <router-link to="/chapter-four" tag="a" fill="white">
-              герои быта
-            </router-link>
+            <router-link to="/chapter-four" tag="a" fill="white">герои быта</router-link>
             <bullet-character />
 
             <menu-link menuLinkName="разный навсегда" menuLinkEndpointName="/chapter-five" />
             <bullet-character />
 
             <menu-link menuLinkName="на новенького" menuLinkEndpointName="/chapter-six" />
-
             <bullet-character />
 
             <menu-link
               menuLinkName="проделки путешественника"
               menuLinkEndpointName="/chapter-seven"
             />
-
             <bullet-character />
 
             <menu-link menuLinkName="масловка" menuLinkEndpointName="/chapter-eight" />

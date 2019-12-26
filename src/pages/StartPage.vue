@@ -14,20 +14,19 @@ export default {
   },
   data() {
     return {
-      // so: 0,
     };
   },
   methods: {
-    // animateMenu() {
-    //   requestAnimationFrame(animateMenu);
-    //   const curve = this.$refs.curve;
-    //   curve.setAttributeNS(null, "startOffset", this.so + "%");
-    //   if (this.so >= 50) {
-    //     this.so = 0;
-    //   }
-    //   this.so += 0.02;
-    //   return this.so
+    // animateStartPageEllipse(){
+    //     console.log("ellipse is clicked", "page:", this.$store.getters.isPageCalled);
     // }
+  },
+  created() {
+    this.$store.dispatch("changePageStatus", true);
+  },
+  beforeDestroy() {
+    this.$store.dispatch("changePageStatus", false);
+    console.log('Exit the component, page:', this.$store.getters.isPageCalled);
   }
 };
 </script>
