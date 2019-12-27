@@ -15,15 +15,12 @@ import ChapterNine from '@/pages/ChapterNine'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  history: true,
   routes: [
     {
       path: '/',
       name: 'StartPage',
       component: StartPage,
-      // beforeRouteLeave: (to, from, next) =>{
-      //   console.log('13981239819');
-      // }
     },
     {
       path: '/chapter-one',
@@ -69,6 +66,12 @@ export default new Router({
       path: '/chapter-Nine',
       name: 'ChapterNine',
       component: ChapterNine
-    }
+    },
+    {
+      path: '*',
+      component: StartPage
+    } // catch all use case
+    
+    //publicPath: "/"
   ]
 })
