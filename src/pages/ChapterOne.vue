@@ -64,7 +64,7 @@
 
     },
 
-    //Иван Литовка базарит вещи
+    //Иван Литовка базарит
     beforeDestroy(){
         console.log("this clog is called when chapter-one component is about to be destroyed, though still fully functional.");
     }

@@ -17,7 +17,10 @@ export default {
     StartPageEllipse
   },
   data() {
-    return {};
+    return {
+       //Ivan bazarit
+        divOpacity: 1,
+    };
   },
   methods: {
     // animateStartPageEllipse(){
@@ -39,7 +42,8 @@ export default {
     setTimeout(() => {
       next();
     }, 1000);
-    // if (this.$store.getters.isPageCalled) next();
+
+    
   }
 };
 </script>
