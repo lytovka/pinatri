@@ -62,6 +62,11 @@
             console.log("this is just a test to see if the leave function is called, will be replaced by actual animation triggers");
         }
 
+    },
+
+    //Иван Литовка базарит вещи
+    beforeDestroy(){
+        console.log("this clog is called when chapter-one component is about to be destroyed, though still fully functional.");
     }
   }
 </script>
