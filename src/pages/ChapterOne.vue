@@ -6,7 +6,7 @@
         <div class="animHolder" id="const">
             <lottie :options="constOptions" v-on:animCreated="handleAnimationDelay"/>
         </div>
-        <div class="animHolder" id="out" style="opacity: 1">
+        <div class="animHolder" id="outHolder">
             <lottie :options="outOptions" v-on:animCreated="handleAnimationHold"/>
         </div>
     </div>
@@ -31,6 +31,7 @@
         animIn: null,
         animConst: null,
         animOut: null,
+        divOpacity: 0,
         animationSpeed: 1
       }
     },
@@ -66,6 +67,7 @@
         var holderLeaving = this.$data.animConst;
         var holderOut = this.$data.animOut;
         this.$data.animConst.addEventListener('loopComplete', function() {
+            document.getElementById('outHolder').style.opacity="1";
             holderOut.play();
             holderLeaving.destroy();
         })
@@ -88,7 +90,7 @@
         height: 100%;
     }
 
-    #in, #const, #out {
+    #in, #const, #outHolder {
         opacity: 0;
     }
 </style>
