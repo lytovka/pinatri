@@ -1,20 +1,83 @@
 <template>
-    <div>
-        <h1>Hello there</h1>
+    <div style="position: absolute; width: 100%; height: 100%;">
+        <div class="animHolder" id="intro">
+            <lottie :options="inOptions" v-on:animCreated="handleAnimation"/>
+        </div>
+        <div class="animHolder" id="const">
+            <lottie :options="constOptions" v-on:animCreated="handleAnimationDelay"/>
+        </div>
+        <div class="animHolder" id="out">
+            <lottie :options="outOptions" v-on:animCreated="handleAnimationHold"/>
+        </div>
     </div>
 </template>
 
 <script>
-export default {
-    name:"ChapterOne",
-    data(){
-        return{}
+  import Lottie from './lottie.vue';
+  import * as inData from '../assets/animations/oneIn.json';
+  import * as constData from '../assets/animations/oneConst.json';
+  import * as outData from '../assets/animations/oneOut.json';
+ 
+  export default {
+    name: 'app',
+    components: {
+      'lottie': Lottie
+    },
+    data() {
+      return {
+        inOptions: {animationData: inData, loop: false, autoplay: false},
+        constOptions: {animationData: constData, loop: true, autoplay: false},
+        outOptions: {animationData: outData, loop: false, autoplay: false},
+        animIn: null,
+        animConst: null,
+        animOut: null,
+        animationSpeed: 1
+      }
+    },
+    methods: {
+
+        handleAnimation: function (anim) {
+            this.animIn = anim;
+            this.animIn.play();
+        },
+
+        handleAnimationDelay: function (anim) {
+            this.animConst = anim;
+            var holderConst = this.animConst;
+            var holderIn = this.animIn;
+            this.animIn.addEventListener('complete', function() {
+                document.getElementById('const').style.opacity="1";
+                holderConst.play();
+                holderIn.destroy();
+            });
+            // this.animConst.play();
+            console.log(this.animIn, "check");
+        },
+
+        handleAnimationHold: function(anim) {
+            this.animOut = anim;
+        },
+
+        handleAnimationOut: function(anim) {
+            console.log("this is just a test to see if the leave function is called, will be replaced by actual animation triggers");
+        }
+
     }
-}
+  }
 </script>
 
 <style>
     h1{
         color: white;
+    }
+
+    .animHolder {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    #in, #const, #out {
+        opacity: 0;
     }
 </style>
