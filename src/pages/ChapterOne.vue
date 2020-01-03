@@ -6,7 +6,7 @@
         <div class="animHolder" id="const">
             <lottie :options="constOptions" v-on:animCreated="handleAnimationDelay"/>
         </div>
-        <div class="animHolder" id="out">
+        <div class="animHolder" id="out" style="opacity: 1">
             <lottie :options="outOptions" v-on:animCreated="handleAnimationHold"/>
         </div>
     </div>
@@ -58,15 +58,21 @@
             this.animOut = anim;
         },
 
-        handleAnimationOut: function(anim) {
-            console.log("this is just a test to see if the leave function is called, will be replaced by actual animation triggers");
-        }
-
     },
 
-    //Иван Литовка базарит
-    beforeDestroy(){
+    //Иван Литовка базарит вещи, но немного спиздел
+
+    beforeRouteLeave(to, from, next) {
+        var holderLeaving = this.$data.animConst;
+        var holderOut = this.$data.animOut;
+        this.$data.animConst.addEventListener('loopComplete', function() {
+            holderOut.play();
+            holderLeaving.destroy();
+        })
         console.log("this clog is called when chapter-one component is about to be destroyed, though still fully functional.");
+        this.$data.animOut.addEventListener('complete', function() {
+            next();
+        })
     }
   }
 </script>
