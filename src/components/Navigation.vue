@@ -19,10 +19,19 @@
           <textPath class="menu-animation" xlink:href="#curve">
             <router-link
               @click.native="clickMenuTab"
-              :to="{name: 'ChapterFour'}"
+              :to="{name: 'ChapterOne'}"
               tag="a"
               fill="white"
-            >герои быта</router-link>
+            >бросающий камни или камни саваоф</router-link>
+            <bullet-character />
+
+            <menu-link menuLinkName="как я ем собаку" menuLinkEndpointName="/chapter-two" />
+            <bullet-character />
+
+            <menu-link menuLinkName="моё богатство — люди" menuLinkEndpointName="/chapter-three" />
+            <bullet-character />
+
+            <menu-link menuLinkName="герои быта" menuLinkEndpointName="/chapter-two" />
             <bullet-character />
 
             <menu-link menuLinkName="разный навсегда" menuLinkEndpointName="/chapter-five" />
@@ -43,17 +52,6 @@
             <menu-link menuLinkName="не про то" menuLinkEndpointName="/chapter-nine" />
             <bullet-character />
 
-            <menu-link
-              menuLinkName="бросающий камни или камни саваоф"
-              menuLinkEndpointName="/chapter-one"
-            />
-            <bullet-character />
-
-            <menu-link menuLinkName="как я ем собаку" menuLinkEndpointName="/chapter-two" />
-            <bullet-character />
-
-            <menu-link menuLinkName="моё богатство — люди" menuLinkEndpointName="/chapter-three" />
-            <bullet-character />
             <animate
               attributeName="startOffset"
               from="0%"
@@ -84,7 +82,10 @@ export default {
   },
   methods: {
     clickMenuTab() {
-      console.log('nav link is not called yet', this.$store.getters.isPageCalled);
+      console.log(
+        "nav link is not called yet",
+        this.$store.getters.isPageCalled
+      );
       this.$store.dispatch("changePageStatus", false);
       console.log("nav link is clicked", this.$store.getters.isPageCalled);
     }
