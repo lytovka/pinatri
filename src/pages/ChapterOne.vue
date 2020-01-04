@@ -19,7 +19,7 @@
   import * as outData from '../assets/animations/oneOut.json';
  
   export default {
-    name: 'app',
+    name: 'ChapterOne',
     components: {
       'lottie': Lottie
     },
@@ -60,8 +60,6 @@
         },
 
     },
-
-    //Иван Литовка базарит вещи, но немного спиздел
 
     beforeRouteLeave(to, from, next) {
         var holderLeaving = this.$data.animConst;
