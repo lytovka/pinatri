@@ -44,6 +44,7 @@
       <circle r="37.3478" transform="matrix(0 -1 -1 0 75.411 59.9557)" stroke="white" />
     </svg>
 
+<<<<<<< HEAD
     <figure>
       <div class="title-container">
         <div id="start-page-title"></div>
@@ -51,6 +52,9 @@
     </figure>
 
     <!-- <transition name="fade" appear>
+=======
+    <transition name="fade" appear :duration="1000">
+>>>>>>> 4adb2093c90bb33af903378a038808886ae58294
       <div v-if="this.$store.getters.isPageCalled">
         <StartPageEllipse :class="wrapperEllipse"/>
       </div>
@@ -75,6 +79,10 @@ export default {
     };
   },
   methods: {},
+<<<<<<< HEAD
+=======
+  beforeCreate() {},
+>>>>>>> 4adb2093c90bb33af903378a038808886ae58294
   created() {
     this.$store.dispatch("changePageStatus", true);
   },
