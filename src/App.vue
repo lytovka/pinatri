@@ -20,7 +20,8 @@ export default {
 <style>
 body {
   overflow: hidden;
-  background-image: url(~@/assets/images/backgroundimg.png);
+  background: #212121;
+  /* background-image: url(~@/assets/images/backgroundimg.png); */
   font-family: "lighthaus";
   box-sizing: border-box;
 }

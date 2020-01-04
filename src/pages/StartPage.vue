@@ -44,11 +44,19 @@
       <circle r="37.3478" transform="matrix(0 -1 -1 0 75.411 59.9557)" stroke="white" />
     </svg>
 
-    <transition name="fade" appear :duration="1000">
-      <div v-if="this.$store.getters.isPageCalled">
-        <StartPageEllipse />
+    <figure>
+      <div class="title-container">
+        <div id="start-page-title"></div>
       </div>
-    </transition>
+    </figure>
+
+    <!-- <transition name="fade" appear>
+      <div v-if="this.$store.getters.isPageCalled">
+        <StartPageEllipse :class="wrapperEllipse"/>
+      </div>
+    </transition>-->
+
+    <StartPageEllipse />
   </div>
 </template>
 
@@ -67,9 +75,7 @@ export default {
     };
   },
   methods: {},
-  beforeCreate() {},
   created() {
-    console.log("Before ellipse created", this.$store.getters.isPageCalled);
     this.$store.dispatch("changePageStatus", true);
   },
   beforeDestroy() {},
@@ -82,6 +88,23 @@ export default {
 </script>
 
 <style>
+.title-container {
+  position: relative;
+  padding-bottom: 55%;
+}
+
+#start-page-title {
+  z-index: 2;
+  position: absolute;
+  left: 37.4%;
+  right: 37.76%;
+  top: 27.22%;
+  bottom: 30.2%;
+  max-width: auto;
+  background-size: cover;
+  background-image: url(~@/assets/images/pinatri_title.svg);
+}
+/* 
 .fade-enter-active {
   transition: all 0.3s ease;
 }
@@ -91,6 +114,23 @@ export default {
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
+} */
+
+.fade-enter-active {
+  transform-origin: right;
+  animation: bounce-in 5s;
+}
+.fade-leave-active {
+  transform-origin: 0;
+  animation: bounce-in 5s;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 #group2 {

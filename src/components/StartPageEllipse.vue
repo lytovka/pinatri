@@ -1,27 +1,31 @@
 <template>
-  <div>
-    <div class="wrapper-ellipse">
-      <svg
-        class="container-ellipse"
-        viewBox="0 0 1484 632"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-      >
-        <defs>
-          <pattern id="image" patternUnits="userSpaceOnUse" height="100%" width="100%">
-            <image
-              height="100%"
-              width="100%"
-              preserveAspectRatio="xMidYMid slice"
-              xlink:href="@/assets/ellipse.png"
-            />
-          </pattern>
-        </defs>
-        <ellipse rx="742" :ry="ellipseMinorRadius" cx="742" cy="316" fill="url(#image)" />
-        <use xlink:href="#curve-ellipse" fill="white" />
-      </svg>
+  <transition name="fade" appear>
+    <div v-if="this.$store.getters.isPageCalled">
+      <div>
+        <div class="wrapper-ellipse">
+          <svg
+            class="container-ellipse"
+            viewBox="0 0 1484 632"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <defs>
+              <pattern id="image" patternUnits="userSpaceOnUse" height="100%" width="100%">
+                <image
+                  height="100%"
+                  width="100%"
+                  preserveAspectRatio="xMidYMid slice"
+                  xlink:href="@/assets/ellipse.png"
+                />
+              </pattern>
+            </defs>
+            <ellipse rx="742" :ry="ellipseMinorRadius" cx="742" cy="316" fill="url(#image)" />
+            <use xlink:href="#curve-ellipse" fill="white" />
+          </svg>
+        </div>
+      </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 
@@ -33,17 +37,7 @@ export default {
       ellipseMinorRadius: 316
     };
   },
-  methods: {
-    changeEllipseRadius() {
-      // this.ellipseMinorRadius <= 6 ? 0 : (this.ellipseMinorRadius -= 6);
-      function helper() {
-        setTimeout(() => {
-          this.ellipseMinorRadius <= 6 ? 0 : (this.ellipseMinorRadius -= 6);
-        }, 1000);
-      }
-      helper();
-    }
-  },
+  methods: {},
   beforeCreate() {
     console.log("recreated the ellipse");
     this.$store.dispatch("changePageStatus", true);
@@ -51,17 +45,8 @@ export default {
   created() {
     this.$store.dispatch("changePageStatus", true);
   },
-  beforeDestroy() {
-    // this.changeEllipseRadius();
-    // setTimeout(function () { this.changeEllipseRadius() }.bind(this), 2000)
-    // setTimeout(() => {
-    //   this.changeEllipseRadius();
-    // }, 1000);
-    // this.$store.dispatch("changePageStatus", false);
-  },
-  destroyed() {
-    // this.$store.dispatch("changePageStatus", false);
-  }
+  beforeDestroy() {},
+  destroyed() {}
 };
 </script>
 
@@ -73,6 +58,23 @@ export default {
   right: 11.35%;
   top: 20.74%;
   bottom: 20.74%;
+}
+
+.fade-enter-active {
+  transform-origin: center center;
+  animation: bounce-in 5s;
+}
+.fade-leave-active {
+  transform-origin: 0;
+  animation: bounce-in 5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .container-ellipse {
