@@ -1,0 +1,57 @@
+<template>
+  <div>
+    <div id="header-container">
+      <div class="header-item item1"></div>
+      <div class="header-item item2">
+        <p id="header-title">PINATRI</p>
+      </div>
+      <div class="header-item item3"></div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "Header"
+};
+</script>
+
+<style scoped>
+#header-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-item {
+  margin: auto 0;
+}
+
+.item1 {
+  width: 50px;
+  height: 27.63px;
+  margin-left: 68px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(~@/assets/images/key_icon.svg);
+}
+
+.item3 {
+  width: 40px;
+  height: 29.52px;
+  margin-right: 68px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(~@/assets/images/book_icon.svg);
+}
+
+#header-title {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 0.29em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+</style>

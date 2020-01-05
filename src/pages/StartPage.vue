@@ -88,7 +88,6 @@ export default {
   right: 37.76%;
   top: 27.22%;
   bottom: 30.2%;
-  max-width: auto;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url(~@/assets/images/pinatri_title.svg);
@@ -116,6 +115,9 @@ export default {
   position: absolute;
   left: 75%;
   top: 41%;
+  max-width: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 #group21 {
@@ -123,5 +125,8 @@ export default {
   position: absolute;
   left: 17%;
   top: 41%;
+  max-width: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 </style>
