@@ -44,22 +44,7 @@
       <circle r="37.3478" transform="matrix(0 -1 -1 0 75.411 59.9557)" stroke="white" />
     </svg>
 
-<<<<<<< HEAD
-    <figure>
-      <div class="title-container">
-        <div id="start-page-title"></div>
-      </div>
-    </figure>
-
-    <!-- <transition name="fade" appear>
-=======
-    <transition name="fade" appear :duration="1000">
->>>>>>> 4adb2093c90bb33af903378a038808886ae58294
-      <div v-if="this.$store.getters.isPageCalled">
-        <StartPageEllipse :class="wrapperEllipse"/>
-      </div>
-    </transition>-->
-
+    <div id="start-page-title"></div>
     <StartPageEllipse />
   </div>
 </template>
@@ -73,22 +58,17 @@ export default {
     StartPageEllipse
   },
   data() {
-    return {
-      //Ivan bazarit
-      divOpacity: 1
-    };
+    return {};
   },
   methods: {},
-<<<<<<< HEAD
-=======
-  beforeCreate() {},
->>>>>>> 4adb2093c90bb33af903378a038808886ae58294
-  created() {
+  beforeCreate() {
     this.$store.dispatch("changePageStatus", true);
   },
+  created() {},
   beforeDestroy() {},
   beforeRouteLeave(to, from, next) {
     setTimeout(() => {
+      this.$store.dispatch("changePageStatus", false);
       next();
     }, 1000);
   }
@@ -102,35 +82,25 @@ export default {
 }
 
 #start-page-title {
-  z-index: 2;
+  z-index: 10;
   position: absolute;
   left: 37.4%;
   right: 37.76%;
   top: 27.22%;
   bottom: 30.2%;
   max-width: auto;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-image: url(~@/assets/images/pinatri_title.svg);
 }
-/* 
-.fade-enter-active {
-  transition: all 0.3s ease;
-}
-.fade-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-} */
 
 .fade-enter-active {
-  transform-origin: right;
-  animation: bounce-in 5s;
+  /* transform-origin: 50% 50%; */
+  animation: bounce-in 2s;
 }
 .fade-leave-active {
   transform-origin: 0;
-  animation: bounce-in 5s;
+  animation: bounce-in 2s;
 }
 @keyframes bounce-in {
   0% {

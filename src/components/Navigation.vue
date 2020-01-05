@@ -19,7 +19,7 @@
           <textPath class="menu-animation" xlink:href="#curve">
             <router-link
               @click.native="clickMenuTab"
-              :to="{name: 'ChapterOne'}"
+              to="/chapter-one"
               tag="a"
               fill="white"
             >бросающий камни или камни саваоф</router-link>
@@ -53,13 +53,22 @@
             <bullet-character />
 
             <animate
+              v-if="this.$store.getters.isPageCalled"
               attributeName="startOffset"
               from="0%"
               to="50%"
-              begin="0s"
-              dur="90s"
+              dur="70s"
               repeatCount="indefinite"
             />
+            <animate
+              v-else
+              attributeName="startOffset"
+              from="0"
+              to="100"
+              dur="1s"
+              repeatCount="1"
+            />
+
           </textPath>
         </text>
       </svg>
@@ -82,12 +91,7 @@ export default {
   },
   methods: {
     clickMenuTab() {
-      console.log(
-        "nav link is not called yet",
-        this.$store.getters.isPageCalled
-      );
       this.$store.dispatch("changePageStatus", false);
-      console.log("nav link is clicked", this.$store.getters.isPageCalled);
     }
   }
 };

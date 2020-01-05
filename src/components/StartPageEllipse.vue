@@ -1,8 +1,8 @@
 <template>
-  <transition name="fade" appear>
-    <div v-if="this.$store.getters.isPageCalled">
-      <div>
-        <div class="wrapper-ellipse">
+  <div>
+    <div class="wrapper-ellipse">
+      <transition name="fade" appear>
+        <div v-if="this.$store.getters.isPageCalled">
           <svg
             class="container-ellipse"
             viewBox="0 0 1484 632"
@@ -19,13 +19,14 @@
                 />
               </pattern>
             </defs>
-            <ellipse rx="742" :ry="ellipseMinorRadius" cx="742" cy="316" fill="url(#image)" />
+
+            <ellipse rx="742" ry="316" cx="742" cy="316" fill="url(#image)" />
             <use xlink:href="#curve-ellipse" fill="white" />
           </svg>
         </div>
-      </div>
+      </transition>
     </div>
-  </transition>
+  </div>
 </template>
 
 
@@ -33,20 +34,20 @@
 export default {
   name: "StartPageEllipse",
   data() {
-    return {
-      ellipseMinorRadius: 316
-    };
+    return {};
   },
   methods: {},
   beforeCreate() {
-    console.log("recreated the ellipse");
-    this.$store.dispatch("changePageStatus", true);
+    // console.log("recreated the ellipse", this.$store.getters.isPageCalled);
+    // this.$store.dispatch("changePageStatus", true);
+    // console.log("before ellipse is created", this.$store.getters.isPageCalled);
   },
   created() {
-    this.$store.dispatch("changePageStatus", true);
+    // this.$store.dispatch("changePageStatus", true);
   },
-  beforeDestroy() {},
-  destroyed() {}
+  beforeDestroy() {
+    // this.$store.dispatch("changePageStatus", false);
+  }
 };
 </script>
 
@@ -61,19 +62,46 @@ export default {
 }
 
 .fade-enter-active {
-  transform-origin: center center;
-  animation: bounce-in 5s;
+  transform-origin: 50% 30%;
+  animation: bounce-in 1s;
 }
 .fade-leave-active {
   transform-origin: 0;
-  animation: bounce-in 5s reverse;
+  animation: bounce-in 1s reverse;
 }
 @keyframes bounce-in {
   0% {
-    transform: scale(0);
+    transform: scaleY(0);
   }
   100% {
-    transform: scale(1);
+    transform: scaleY(1);
+  }
+}
+
+@-webkit-keyframes bounce-in{
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@-moz-keyframes bounce-in{
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@-o-keyframes bounce-in{
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
   }
 }
 
