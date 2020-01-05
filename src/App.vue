@@ -27,6 +27,7 @@ export default {
 <style>
 body {
   overflow: hidden;
+  background: #212121;
   background-image: url(~@/assets/images/backgroundimg.png);
   font-family: "lighthaus";
   box-sizing: border-box;

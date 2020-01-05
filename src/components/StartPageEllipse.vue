@@ -38,15 +38,11 @@ export default {
   },
   methods: {},
   beforeCreate() {
-    // console.log("recreated the ellipse", this.$store.getters.isPageCalled);
-    // this.$store.dispatch("changePageStatus", true);
-    // console.log("before ellipse is created", this.$store.getters.isPageCalled);
+    
   },
   created() {
-    // this.$store.dispatch("changePageStatus", true);
   },
   beforeDestroy() {
-    // this.$store.dispatch("changePageStatus", false);
   }
 };
 </script>
