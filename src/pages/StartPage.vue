@@ -25,10 +25,13 @@ export default {
   created() {},
   beforeDestroy() {},
   beforeRouteLeave(to, from, next) {
-    setTimeout(() => {
-      this.$store.dispatch("changePageStatus", false);
-      next();
-    }, 1000);
+    if (to.name === "TableOfContents") next();
+    else {
+      setTimeout(() => {
+        this.$store.dispatch("changePageStatus", false);
+        next();
+      }, 1000);
+    }
   }
 };
 </script>
@@ -77,7 +80,6 @@ export default {
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url(~@/assets/images/group2.svg);
-
 }
 
 #group21 {

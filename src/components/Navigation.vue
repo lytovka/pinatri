@@ -50,7 +50,7 @@
             <bullet-character />
 
             <menu-link menuLinkName="не про то" menuLinkEndpointName="/chapter-nine" />
-            <bullet-character />
+            <tspan dy="20" font-size="100px">&#8226;</tspan>
 
             <animate
               v-if="this.$store.getters.isPageCalled"
@@ -60,15 +60,7 @@
               dur="70s"
               repeatCount="indefinite"
             />
-            <animate
-              v-else
-              attributeName="startOffset"
-              from="0"
-              to="100"
-              dur="1s"
-              repeatCount="1"
-            />
-
+            <animate v-else attributeName="startOffset" from="0" to="100" dur="1s" repeatCount="1" />
           </textPath>
         </text>
       </svg>

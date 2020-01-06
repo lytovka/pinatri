@@ -10,6 +10,8 @@ import ChapterSix from '@/pages/ChapterSix'
 import ChapterSeven from '@/pages/ChapterSeven'
 import ChapterEight from '@/pages/ChapterEight'
 import ChapterNine from '@/pages/ChapterNine'
+import TableOfContents from '@/pages/TableOfContents'
+
 
 
 Vue.use(Router)
@@ -66,6 +68,11 @@ export default new Router({
       path: '/chapter-Nine',
       name: 'ChapterNine',
       component: ChapterNine
+    },
+    {
+      path: '/table-of-contents',
+      name: "TableOfContents",
+      component: TableOfContents
     },
     {
       path: '*',

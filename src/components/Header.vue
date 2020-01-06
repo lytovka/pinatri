@@ -5,7 +5,7 @@
       <div class="header-item item2">
         <p id="header-title">PINATRI</p>
       </div>
-      <div class="header-item item3"></div>
+      <router-link to="/table-of-contents" tag="div" class="header-item item3"></router-link>
     </div>
   </div>
 </template>
@@ -24,6 +24,7 @@ export default {
 
 .header-item {
   margin: auto 0;
+  cursor: pointer;
 }
 
 .item1 {

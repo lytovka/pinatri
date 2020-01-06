@@ -1,10 +1,12 @@
 <template>
-  <div id="app">
-    <Header />
-    <div class="content">
-      <Navigation />
+  <div>
+    <div id="app" v-if="this.$route.fullPath !== '/table-of-contents'">
+      <Header />
+      <div class="content">
+        <Navigation />
+      </div>
+      <Footer />
     </div>
-    <Footer />
     <router-view></router-view>
   </div>
 </template>
@@ -33,7 +35,7 @@ body {
   box-sizing: border-box;
 }
 
-.content{
+.content {
   min-height: calc(100vh - 200px);
 }
 
