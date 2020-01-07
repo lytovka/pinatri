@@ -31,7 +31,7 @@
             <menu-link menuLinkName="моё богатство — люди" menuLinkEndpointName="/chapter-three" />
             <bullet-character />
 
-            <menu-link menuLinkName="герои быта" menuLinkEndpointName="/chapter-two" />
+            <menu-link menuLinkName="герои быта" menuLinkEndpointName="/chapter-four" />
             <bullet-character />
 
             <menu-link menuLinkName="разный навсегда" menuLinkEndpointName="/chapter-five" />
@@ -93,9 +93,10 @@ export default {
 .wrapper-menu {
   position: absolute;
   z-index: 2;
-  left: 11.35%;
-  right: 11.35%;
-  top: 20.74%;
-  bottom: 20.74%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 74.9vw;
+  height: 32vw;
 }
 </style>

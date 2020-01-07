@@ -45,10 +45,11 @@ export default {
 #start-page-title {
   z-index: 10;
   position: absolute;
-  left: 37.4%;
-  right: 37.76%;
-  top: 27.22%;
-  bottom: 30.2%;
+  width: 25vw;
+  height: 25vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url(~@/assets/images/pinatri_title.svg);
@@ -72,11 +73,12 @@ export default {
 
 #group2 {
   z-index: 2;
-  width: 114px;
-  height: 120px;
+  width: 7.6vw;
+  height: 8vw;
   position: absolute;
   left: 75%;
-  top: 41%;
+  top: 50%;
+  transform: translateY(-50%);
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url(~@/assets/images/group2.svg);
@@ -84,11 +86,12 @@ export default {
 
 #group21 {
   z-index: 2;
-  width: 114px;
-  height: 120px;
+  width: 7.6vw;
+  height: 8vw;
   position: absolute;
   left: 17%;
-  top: 41%;
+  top: 50%;
+  transform: translateY(-50%);
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url(~@/assets/images/group21.svg);

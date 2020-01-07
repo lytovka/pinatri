@@ -1,5 +1,5 @@
 <template>
-    <div style="position: absolute; width: 100%; height: 100%;">
+    <div style="position: absolute; width: 100vw; height: 100vh; left: 0%; top: 0%">
         <div class="animHolder" id="intro">
             <lottie :options="inOptions" v-on:animCreated="handleAnimation"/>
         </div>

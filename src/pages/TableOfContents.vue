@@ -46,6 +46,7 @@ export default {
 }
 .table-of-contents-item {
   font-size: 7vw;
+  cursor: pointer;
 }
 
 .table-of-contents-item:hover {
@@ -65,7 +66,7 @@ p {
   }
 
   .table-of-contents-item {
-    font-size: 10vw;
+    font-size: 8vw;
   }
 }
 </style>

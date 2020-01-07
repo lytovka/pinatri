@@ -51,10 +51,11 @@ export default {
 .wrapper-ellipse {
   position: absolute;
   z-index: 1;
-  left: 11.35%;
-  right: 11.35%;
-  top: 20.74%;
-  bottom: 20.74%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 74.9vw;
+  height: 32vw;
 }
 
 .fade-enter-active {
