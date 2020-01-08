@@ -21,9 +21,8 @@ export default {
   methods: {},
   beforeCreate() {
     this.$store.dispatch("changePageStatus", true);
+    this.$store.dispatch("updateLastRoute", "");
   },
-  created() {},
-  beforeDestroy() {},
   beforeRouteLeave(to, from, next) {
     if (to.name === "TableOfContents") next();
     else {
