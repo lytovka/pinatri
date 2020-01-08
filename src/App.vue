@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="app" v-if="this.$route.fullPath !== '/table-of-contents'">
+    <div id="app" v-if="HomePage()">
       <Header />
       <div class="content">
         <Navigation />
@@ -22,6 +22,11 @@ export default {
     Navigation,
     Header,
     Footer
+  },
+  methods: {
+    HomePage() {
+      return Boolean(!this.$route.fullPath.includes("/table-of-contents"));
+    }
   }
 };
 </script>

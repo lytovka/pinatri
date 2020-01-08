@@ -72,9 +72,9 @@ export default {
     });
 
     if (to.name === "StartPage") {
-      setTimeout(() => {
-        this.$store.dispatch("changePageStatus", true);
-      }, 3000);
+      this.$store.dispatch("changePageStatus", true);
+    } else if (to.name === "TableOfContentsPage") {
+      this.$store.dispatch("updateLastRoute", "/chapter-one");
     }
   }
 };

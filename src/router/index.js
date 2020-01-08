@@ -10,13 +10,16 @@ import ChapterSix from '@/pages/ChapterSix'
 import ChapterSeven from '@/pages/ChapterSeven'
 import ChapterEight from '@/pages/ChapterEight'
 import ChapterNine from '@/pages/ChapterNine'
-import TableOfContents from '@/pages/TableOfContents'
+import TableOfContentsPage from '@/pages/TableOfContentsWrapper'
+import Chapters from '@/pages/Chapters'
+import ChapterOneContents from '@/pages/ChapterOneContents'
+
 
 
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   history: true,
   routes: [
     {
@@ -55,7 +58,7 @@ export default new Router({
       component: ChapterSix
     },
     {
-      path: '/chapter-Seven',
+      path: '/chapter-seven',
       name: 'ChapterSeven',
       component: ChapterSeven
     },
@@ -65,20 +68,40 @@ export default new Router({
       component: ChapterEight
     },
     {
-      path: '/chapter-Nine',
+      path: '/chapter-nine',
       name: 'ChapterNine',
       component: ChapterNine
     },
     {
       path: '/table-of-contents',
-      name: "TableOfContents",
-      component: TableOfContents
+      name: "TableOfContentsPage",
+      component: TableOfContentsPage,
+      children: [
+        {
+          path: "chapters",
+          name: "Chapters",
+          component: Chapters,
+          children: [
+            {
+              path: "chapter-one",
+              name: "ChapterOneContents",
+              component: ChapterOneContents
+            }
+          ]
+        }
+      ]
     },
     {
       path: '*',
       component: StartPage
     } // catch all use case
-    
+
     //publicPath: "/"
   ]
 })
+
+// router.afterEach(to => {
+//   localStorage.setItem(LS_ROUTE_KEY, to.next);
+// })
+
+export default router;
