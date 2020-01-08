@@ -35,7 +35,8 @@
 <script>
 export default {
   name: "Chapters",
-  methods: {},
+  methods: {
+  },
   beforeCreate() {
     console.log(this.$router);
   }
@@ -43,6 +44,7 @@ export default {
 </script>
 
 <style scoped>
+
 #arrow-left {
   z-index: 4;
   position: absolute;

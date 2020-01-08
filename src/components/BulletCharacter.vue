@@ -1,5 +1,5 @@
 <template>
-  <tspan dy="20" font-size="100px">&#8226;</tspan>
+  <tspan dy="20" font-size="95px">&#8226;</tspan>
 </template>
 
 <script>

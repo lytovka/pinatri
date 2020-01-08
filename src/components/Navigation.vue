@@ -16,7 +16,11 @@
         </defs>
         <use xlink:href="#curve" fill="none" />
         <text dy="30" font-size="1.84375rem" letter-spacing="1px" fill="white" textLength="302%">
-          <textPath :style="this.$store.getters.isAnimationActive ? 'pointer-events: none;' : ''" class="menu-animation" xlink:href="#curve">
+          <textPath
+            :style="this.$store.getters.isAnimationActive ? 'pointer-events: none;' : ''"
+            class="menu-animation"
+            xlink:href="#curve"
+          >
             <router-link
               @click.native="clickMenuTab"
               to="/chapter-one"
@@ -57,7 +61,7 @@
               attributeName="startOffset"
               from="0%"
               to="50%"
-              dur="70s"
+              dur="100s"
               repeatCount="indefinite"
             />
             <animate v-else attributeName="startOffset" from="0" to="100" dur="1s" repeatCount="1" />
