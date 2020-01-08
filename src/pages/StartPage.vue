@@ -89,7 +89,7 @@ export default {
   width: 7.6vw;
   height: 8vw;
   position: absolute;
-  left: 17%;
+  right: 75%;
   top: 50%;
   transform: translateY(-50%);
   background-size: contain;
