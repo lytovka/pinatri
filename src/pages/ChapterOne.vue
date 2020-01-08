@@ -60,22 +60,24 @@ export default {
   },
 
   beforeRouteLeave(to, from, next) {
-    var holderLeaving = this.$data.animConst;
-    var holderOut = this.$data.animOut;
-    this.$data.animConst.addEventListener("loopComplete", function() {
-      document.getElementById("outHolder").style.opacity = "1";
-      holderOut.play();
-      holderLeaving.destroy();
-    });
-    this.$data.animOut.addEventListener("complete", function() {
-      next();
-    });
-
-    if (to.name === "StartPage") {
-      setTimeout(() => {
-        this.$store.dispatch("changePageStatus", true);
-      }, 3000);
+    if (to.name === "TableOfContents") next();
+    else {
+      var holderLeaving = this.$data.animConst;
+      var holderOut = this.$data.animOut;
+      this.$data.animConst.addEventListener("loopComplete", function() {
+        document.getElementById("outHolder").style.opacity = "1";
+        holderOut.play();
+        holderLeaving.destroy();
+      });
+      this.$data.animOut.addEventListener("complete", function() {
+        next();
+      });
     }
+    //if (to.name === "StartPage") {
+      //setTimeout(() => {
+        //this.$store.dispatch("changePageStatus", true);
+      //}, 3000);
+    //}
   }
 };
 </script>

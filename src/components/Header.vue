@@ -23,6 +23,8 @@ export default {
 }
 
 .header-item {
+  position: relative;
+  z-index: 3;
   margin: auto 0;
   cursor: pointer;
 }
@@ -55,4 +57,5 @@ export default {
 
   color: #ffffff;
 }
+
 </style>
