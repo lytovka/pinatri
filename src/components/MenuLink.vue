@@ -1,5 +1,5 @@
 <template>
-  <router-link @click.native="clickMenuTab" v-bind:to="menuLinkEndpointName" tag="a" fill="white">
+  <router-link @click.native="clickMenuTab" :to="menuLinkEndpointName" tag="a" fill="white">
     <tspan dy="-20">{{menuLinkName}}</tspan>
   </router-link>
 </template>

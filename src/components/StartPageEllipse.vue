@@ -2,7 +2,7 @@
   <div>
     <div class="wrapper-ellipse">
       <transition name="fade" appear>
-        <div v-if="this.$store.getters.isPageCalled">
+        <div v-if="isStartPageCalled()">
           <svg
             class="container-ellipse"
             viewBox="0 0 1484 632"
@@ -36,14 +36,11 @@ export default {
   data() {
     return {};
   },
-  methods: {},
-  beforeCreate() {
-    
+  methods: {
+    isStartPageCalled(){
+      return Boolean(this.$store.getters.isPageCalled);
+    }
   },
-  created() {
-  },
-  beforeDestroy() {
-  }
 };
 </script>
 

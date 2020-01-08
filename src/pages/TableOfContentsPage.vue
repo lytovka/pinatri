@@ -1,9 +1,8 @@
 <template>
   <div>
-    <router-link to="/" tag="div" id="table-of-contents-back-button"></router-link>
     <div id="table-of-contents-container">
       <div class="table-of-contents-item">
-        <p>Оглавлениe</p>
+        <router-link to="/table-of-contents/chapters" tag="p">Оглавление</router-link>
       </div>
       <div class="table-of-contents-item">
         <p>Приобрести книгу</p>
@@ -16,27 +15,17 @@
 </template>
 
 <script>
+
 export default {
-  name: "TableOfContents"
+  name: "TableOfContentsPage",
 };
 </script>
 
 <style scoped>
-#table-of-contents-back-button {
-  position: absolute;
-  left: 3.33%;
-  right: 94.79%;
-  top: 5.93%;
-  bottom: 90.74%;
-  width: 36px;
-  height: 36px;
-  cursor: pointer;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url(~@/assets/images/menu.svg);
-}
 
 #table-of-contents-container {
+  position: relative;
+  z-index: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -47,6 +36,7 @@ export default {
 .table-of-contents-item {
   font-size: 7vw;
   cursor: pointer;
+  text-align: center;
 }
 
 .table-of-contents-item:hover {
