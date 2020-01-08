@@ -1,7 +1,5 @@
 <template>
   <div>
-    <router-link to="/" id="arrow-left" tag="div"></router-link>
-
     <div id="chapters-container">
       <router-link class="chapters-item" to="/table-of-contents/chapters/chapter-one" tag="div">
         <p>бросающий камни или камни саваоф</p>
@@ -31,18 +29,13 @@
         <p>не про то</p>
       </div>
     </div>
-    <router-view></router-view>
   </div>
 </template>
 
 <script>
 export default {
   name: "Chapters",
-  methods: {
-    goBack() {
-      this.$router.go(-1);
-    }
-  },
+  methods: {},
   beforeCreate() {
     console.log(this.$router);
   }

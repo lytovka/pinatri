@@ -11,7 +11,7 @@ import ChapterSeven from '@/pages/ChapterSeven'
 import ChapterEight from '@/pages/ChapterEight'
 import ChapterNine from '@/pages/ChapterNine'
 import TableOfContentsPage from '@/pages/TableOfContentsWrapper'
-import Chapters from '@/pages/Chapters'
+import Chapters from '@/pages/ChaptersWrapper'
 import ChapterOneContents from '@/pages/ChapterOneContents'
 
 

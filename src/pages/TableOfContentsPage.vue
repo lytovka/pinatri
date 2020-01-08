@@ -15,13 +15,9 @@
 </template>
 
 <script>
-import Chapters from "@/pages/Chapters";
 
 export default {
   name: "TableOfContentsPage",
-  components: {
-    Chapters
-  },
 };
 </script>
 

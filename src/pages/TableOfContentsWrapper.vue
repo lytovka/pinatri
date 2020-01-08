@@ -1,8 +1,7 @@
 <template>
   <div>
     <router-link :to="toLastVisitedChapterPage()" tag="div" id="table-of-contents-back-button"></router-link>
-    <table-of-contents-page :class="[isPageSemiActive() ? 'semiActive' : '', isPageInactive() ? 'inactive' : '']"></table-of-contents-page>
-    <chapters></chapters>
+    <table-of-contents-page v-if="isPageActive()" :class="[isPageSemiActive() ? 'semiActive' : '']"></table-of-contents-page>
     <router-view></router-view>
   </div>
 </template>
@@ -26,14 +25,10 @@ export default {
         : "/";
     },
     isPageSemiActive() {
-      if (this.$route.fullPath.includes("/chapters")) {
-        return true;
-      } else return false;
+      return Boolean(this.$route.fullPath.includes("/chapters"));
     },
-    isPageInactive(){
-      if (this.$route.fullPath.includes("/chapters/chapter")) {
-        return true;
-      } else return false;
+    isPageActive() {
+      return Boolean(!this.$route.fullPath.includes("/chapters/chapter"));
     }
   },
   beforeCreate() {
@@ -48,10 +43,6 @@ export default {
   opacity: 0.2;
   filter: blur(5px);
   color: rgba(255, 255, 255, 0.1);
-}
-
-.inactive{
-  opacity: 0;
 }
 
 #table-of-contents-back-button {
@@ -69,4 +60,12 @@ export default {
   background-image: url(~@/assets/images/menu.svg);
 }
 
+@media screen and (max-width: 450px) {
+  #table-of-contents-back-button {
+    left: 5.56%;
+    right: 87.78%;
+    top: 3.12%;
+    bottom: 93.12%;
+  }
+}
 </style>
