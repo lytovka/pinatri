@@ -33,7 +33,7 @@ export default {
 
 <style>
 body {
-  overflow: hidden;
+  overflow-x: hidden;
   background: #212121;
   background-image: url(~@/assets/images/backgroundimg.png);
   font-family: "lighthaus";
