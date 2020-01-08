@@ -32,8 +32,9 @@ export default {
 </script>
 
 <style>
+
 body {
-  overflow-x: hidden;
+  overflow: hidden;
   background: #212121;
   background-image: url(~@/assets/images/backgroundimg.png);
   font-family: "lighthaus";

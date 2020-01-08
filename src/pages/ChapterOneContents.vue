@@ -48,6 +48,9 @@ export default {
 </script>
 
 <style scoped>
+body {
+  overflow-y: scroll;
+}
 #chapter-one-container {
   position: relative;
   color: white;
@@ -85,7 +88,7 @@ span {
   }
 
 @media screen and (max-width: 768px) {
-  
+
   #chapter-one-container {
     height: auto;
   }

@@ -36,6 +36,7 @@ export default {
 </script>
 
 <style>
+
 .title-container {
   position: relative;
   padding-bottom: 55%;
