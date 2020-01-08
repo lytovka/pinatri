@@ -60,16 +60,19 @@ export default {
   },
 
   beforeRouteLeave(to, from, next) {
-    var holderLeaving = this.$data.animConst;
-    var holderOut = this.$data.animOut;
-    this.$data.animConst.addEventListener("loopComplete", function() {
-      document.getElementById("outHolder").style.opacity = "1";
-      holderOut.play();
-      holderLeaving.destroy();
-    });
-    this.$data.animOut.addEventListener("complete", function() {
-      next();
-    });
+    if (to.name === "TableOfContentsPage") next();
+    else {
+      var holderLeaving = this.$data.animConst;
+      var holderOut = this.$data.animOut;
+      this.$data.animConst.addEventListener("loopComplete", function() {
+        document.getElementById("outHolder").style.opacity = "1";
+        holderOut.play();
+        holderLeaving.destroy();
+      });
+      this.$data.animOut.addEventListener("complete", function() {
+        next();
+      });
+    }
 
     if (to.name === "StartPage") {
       this.$store.dispatch("changePageStatus", true);

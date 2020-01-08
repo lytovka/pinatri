@@ -62,7 +62,7 @@
     },
 
     beforeRouteLeave(to, from, next) {
-        if (to.name === "TableOfContents") next();
+        if (to.name === "TableOfContentsPage") next();
         else {
              var holderLeaving = this.$data.animConst;
             var holderOut = this.$data.animOut;
@@ -75,6 +75,12 @@
             this.$data.animOut.addEventListener('complete', function() {
                 next();
             })
+        }
+
+        if (to.name === "StartPage") {
+            this.$store.dispatch("changePageStatus", true);
+        } else if (to.name === "TableOfContentsPage") {
+            this.$store.dispatch("updateLastRoute", "/chapter-nine");
         }
     }
   }

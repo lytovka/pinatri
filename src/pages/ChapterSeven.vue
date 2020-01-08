@@ -76,6 +76,12 @@
                 next();
             })
         }
+    
+        if (to.name === "StartPage") {
+            this.$store.dispatch("changePageStatus", true);
+        } else if (to.name === "TableOfContentsPage") {
+            this.$store.dispatch("updateLastRoute", "/chapter-seven");
+        }
     }
   }
 </script>

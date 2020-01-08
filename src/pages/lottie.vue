@@ -8,7 +8,8 @@
     props: {
       options: {
         type: Object,
-        required: true
+        required: true,
+        rendererSettings: {preserveAspectRatio : 'none'},
       },
       height: Number,
       width: Number,
@@ -30,7 +31,7 @@
           loop: this.options.loop !== false,
           autoplay: this.options.autoplay !== false,
           animationData: this.options.animationData,
-          rendererSettings: this.options.rendererSettings
+          rendererSettings: {preserveAspectRatio : 'xMidYMid slice'},
         }
       );
       this.$emit('animCreated', this.anim)
