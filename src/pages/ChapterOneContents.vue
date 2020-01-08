@@ -1,19 +1,24 @@
 <template>
-    <h1>hodasodka</h1>
+  <div id="chapter-one-container">
+    <div class="chapter-one-item">1</div>
+    <div class="chapter-one-item">2</div>
+    <div class="chapter-one-item">3</div>
+    <div class="chapter-one-item">4</div>
+  </div>
 </template>
 
 <script>
 export default {
-    name: "ChapterOneContents"
-}
+  name: "ChapterOneContents"
+};
 </script>
 
 <style scoped>
-    h1{
-        color: white;
-        font-size: 42px;
-        position: absolute;
-        left: 20%;
-        top: 50%;
-    }
+#chapter-one-container {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto;
+}
+.chapter-one-item {
+}
 </style>
