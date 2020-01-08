@@ -13,7 +13,7 @@ export default {
         }
     },
     getters: {
-        isAnimationCalled(state) {
+        isAnimationActive(state) {
             return state.animation;
         }
     }

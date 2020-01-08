@@ -16,7 +16,7 @@
         </defs>
         <use xlink:href="#curve" fill="none" />
         <text dy="30" font-size="1.84375rem" letter-spacing="1px" fill="white" textLength="302%">
-          <textPath class="menu-animation" xlink:href="#curve">
+          <textPath :style="this.$store.getters.isAnimationActive ? 'pointer-events: none;' : ''" class="menu-animation" xlink:href="#curve">
             <router-link
               @click.native="clickMenuTab"
               to="/chapter-one"

@@ -51,7 +51,7 @@ export default {
         holderIn.destroy();
       });
       // this.animConst.play();
-      console.log(this.animIn, "check");
+      // console.log(this.animIn, "check");
     },
 
     handleAnimationHold: function(anim) {
@@ -59,31 +59,38 @@ export default {
     }
   },
 
+  beforeDestroy() {},
+  destroyed() {},
+
   beforeRouteLeave(to, from, next) {
-    if (to.name === "TableOfContentsPage") next();
-    else {
+    const self = this;
+
+    if (to.name === "TableOfContentsPage") {
+      this.$data.animConst.destroy();
+      next();
+    } else {
+      this.$store.dispatch("changeAnimationStatus", true);
+
       var holderLeaving = this.$data.animConst;
       var holderOut = this.$data.animOut;
+
       this.$data.animConst.addEventListener("loopComplete", function() {
         document.getElementById("outHolder").style.opacity = "1";
         holderOut.play();
         holderLeaving.destroy();
       });
-      this.$data.animOut.addEventListener("complete", function() {
-        next();
-      });
     }
+
+    this.$data.animOut.addEventListener("complete", function() {
+      self.$store.dispatch("changeAnimationStatus", false);
+      next();
+    });
 
     if (to.name === "StartPage") {
       this.$store.dispatch("changePageStatus", true);
     } else if (to.name === "TableOfContentsPage") {
       this.$store.dispatch("updateLastRoute", "/chapter-one");
     }
-    //if (to.name === "StartPage") {
-      //setTimeout(() => {
-        //this.$store.dispatch("changePageStatus", true);
-      //}, 3000);
-    //}
   }
 };
 </script>
