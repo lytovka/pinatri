@@ -67,7 +67,7 @@ export default {
   beforeRouteLeave(to, from, next) {
     const self = this;
 
-    if (to.name === "TableOfContentsPage") {
+    if (to.name === "TableOfContentsPage" || to.name === "ChapterPoems") {
       this.$data.animConst.destroy();
       next();
     } else {

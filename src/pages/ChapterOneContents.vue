@@ -1,5 +1,5 @@
 <template>
-  <div id="chapter-one-container">
+  <div class="chapter-one-container">
     <div class="container-grid">
       <pre><span>01</span>Чьё ухо за перон</pre>
       <pre><span>02</span>Веретено</pre>
@@ -55,7 +55,7 @@ export default {
 </style>
 
 <style scoped>
-#chapter-one-container {
+.chapter-one-container {
   position: relative;
   color: white;
   height: 100vh;
@@ -91,7 +91,7 @@ span {
   }
 
   @media screen and (max-width: 768px) {
-    #chapter-one-container {
+    .chapter-one-container {
       height: auto;
       overflow-y: scroll;
     }

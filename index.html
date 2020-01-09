@@ -7,12 +7,24 @@
   <title>pinatri</title>
 </head>
 
+<script>
+  function load() {
+    const bodyTag = document.getElementsByTagName('body')[0];
+    if (bodyTag.contains.classList("chapter-one-container")) {
+      document.getElementsByTagName('body')[0].style.overflow = "auto";
+    }
+    else {
+      document.getElementsByTagName('body')[0].style.overflow = "hidden";
+    }
+  }
+  window.onload = load;
+</script>
+
 <body>
   <div id="app"></div>
   <!-- built files will be auto injected -->
-  
-  <script type="text/ecmascript" href="./src/scripts/smil.user.js"></script>
 
+  <script type="text/ecmascript" href="./src/scripts/smil.user.js"></script>
 </body>
 
 </html>

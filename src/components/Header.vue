@@ -3,7 +3,7 @@
     <div id="header-container">
       <div class="header-item item1"></div>
       <div class="header-item item2">
-        <p id="header-title">PINATRI</p>
+        <!-- <p id="header-title">PINATRI</p> -->
       </div>
       <router-link to="/table-of-contents" tag="div" class="header-item item3"></router-link>
     </div>
@@ -20,6 +20,7 @@ export default {
 #header-container {
   display: flex;
   justify-content: space-between;
+  margin-top: 48px;
 }
 
 .header-item {
@@ -36,6 +37,16 @@ export default {
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url(~@/assets/images/key_icon.svg);
+}
+
+.item2 {
+  width: 283px;
+  height: 48px;
+  line-height: 48px;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(~@/assets/images/pinatri.svg);
 }
 
 .item3 {
@@ -57,5 +68,4 @@ export default {
 
   color: #ffffff;
 }
-
 </style>

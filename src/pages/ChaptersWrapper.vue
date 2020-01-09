@@ -1,6 +1,8 @@
 <template>
   <div>
-    <router-link to="/" id="arrow-left" tag="div"></router-link>
+    <router-link id="arrow-left" :to="this.$store.getters.getTableOfContentsBack" tag="div">
+      <p>Назад</p>
+    </router-link>
     <chapters :class="[isPageSemiActive() ? 'semiActive' : '']"></chapters>
     <router-view></router-view>
   </div>
@@ -14,16 +16,26 @@ export default {
   components: {
     Chapters
   },
+  data() {
+    return {};
+  },
   methods: {
     isPageSemiActive() {
       return Boolean(this.$route.fullPath.includes("/chapters/chapter"));
     },
-    goBack() {
-      window.history.length > 1 ? this.$router.go(-1) : this.$router.push("/");
+    getBack() {
+      if (this.$route.fullPath.includes("/table-of-contents/chapters/chapter"))
+        this.$store.dispatch(
+          "updateTableOfContentsBack",
+          "/table-of-contents/chapters"
+        );
     }
   },
-  beforeCreate() {
-    console.log(this.$router);
+  created() {
+    this.getBack();
+  },
+  beforeUpdate() {
+    this.getBack();
   }
 };
 </script>
@@ -55,12 +67,24 @@ export default {
   background-image: url(~@/assets/images/arrow-left.svg);
 }
 
+p {
+  position: absolute;
+  left: 110.64%;
+  top: -30.17%;
+  color: white;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
 @media screen and (max-width: 450px) {
   #arrow-left {
     left: 87.78%;
     right: 5.56%;
     top: 3.12%;
     bottom: 93.12%;
+  }
+  p{
+    display: none;
   }
 }
 </style>

@@ -35,13 +35,11 @@
 <script>
 export default {
   name: "Chapters",
-  methods: {
-  }
+  methods: {}
 };
 </script>
 
 <style scoped>
-
 #arrow-left {
   z-index: 4;
   position: absolute;
@@ -60,7 +58,7 @@ export default {
 #chapters-container {
   position: absolute;
   left: 0%;
-  top: 7.35%;
+  top: 0%;
   z-index: 2;
   flex-direction: column;
   justify-content: center;
@@ -71,13 +69,12 @@ export default {
   line-height: 0px;
 }
 .chapters-item {
-  font-size: 32px;
+  font-size: 48px;
   cursor: pointer;
   text-align: center;
 }
 
 .chapters-item:hover {
-  cursor: pointer;
   background-position-y: 50%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -86,6 +83,12 @@ export default {
 
 p {
   color: white;
+}
+
+@media (max-width: 1500px) {
+  .chapters-item {
+    font-size: 32px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -98,9 +101,12 @@ p {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 568px) {
   .chapters-item {
     font-size: 20px;
+  }
+  #chapters-container {
+    line-height: unset;
   }
 }
 </style>

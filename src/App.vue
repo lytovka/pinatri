@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="app" v-if="HomePage()">
+    <div v-if="HomePage()">
       <Header />
       <div v-if="Navigation()" class="content">
         <Navigation />
@@ -45,7 +45,6 @@ body {
   background-image: url(~@/assets/images/backgroundimg.png);
   font-family: "lighthaus";
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 .content {

@@ -29,10 +29,17 @@ export default {
     },
     isPageActive() {
       return Boolean(!this.$route.fullPath.includes("/chapters/chapter"));
+    },
+    getBack() {
+      if (this.$route.fullPath === "/table-of-contents/chapters")
+        this.$store.dispatch("updateTableOfContentsBack", "/table-of-contents");
     }
   },
-  beforeCreate() {
-    console.log("last route", this.$store.getters.getLastRoute);
+  created() {
+    this.getBack();
+  },
+  beforeUpdate() {
+    this.getBack();
   }
 };
 </script>
