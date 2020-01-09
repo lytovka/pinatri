@@ -36,9 +36,6 @@
 export default {
   name: "Chapters",
   methods: {
-  },
-  beforeCreate() {
-    console.log(this.$router);
   }
 };
 </script>

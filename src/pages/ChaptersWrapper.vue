@@ -17,6 +17,9 @@ export default {
   methods: {
     isPageSemiActive() {
       return Boolean(this.$route.fullPath.includes("/chapters/chapter"));
+    },
+    goBack() {
+      window.history.length > 1 ? this.$router.go(-1) : this.$router.push("/");
     }
   },
   beforeCreate() {

@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 import StartPage from '@/pages/StartPage'
 import ChapterOne from '@/pages/ChapterOne'
 import ChapterTwo from '@/pages/ChapterTwo'
@@ -10,6 +11,10 @@ import ChapterSix from '@/pages/ChapterSix'
 import ChapterSeven from '@/pages/ChapterSeven'
 import ChapterEight from '@/pages/ChapterEight'
 import ChapterNine from '@/pages/ChapterNine'
+
+import ChapterPoems from '@/pages/ChapterPoems'
+
+
 import TableOfContentsPage from '@/pages/TableOfContentsWrapper'
 import Chapters from '@/pages/ChaptersWrapper'
 import ChapterOneContents from '@/pages/ChapterOneContents'
@@ -36,6 +41,11 @@ const router = new Router({
       path: '/chapter-two',
       name: 'ChapterTwo',
       component: ChapterTwo
+    },
+    {
+      path: '/chapter-two-poems',
+      name: 'ChapterPoems',
+      component: ChapterPoems
     },
     {
       path: '/chapter-three',
@@ -73,6 +83,51 @@ const router = new Router({
       component: ChapterNine
     },
     {
+      path: '/chapter-one-poems',
+      name: 'ChapterPoems',
+      component: ChapterPoems
+    },
+    {
+      path: '/chapter-two-poems',
+      name: 'ChapterPoems',
+      component: ChapterPoems
+    },
+    {
+      path: '/chapter-three-poems',
+      name: 'ChapterPoems',
+      component: ChapterPoems
+    },
+    {
+      path: '/chapter-four-poems',
+      name: 'ChapterPoems',
+      component: ChapterPoems
+    },
+    {
+      path: '/chapter-five-poems',
+      name: 'ChapterPoems',
+      component: ChapterPoems
+    },
+    {
+      path: '/chapter-six-poems',
+      name: 'ChapterPoems',
+      component: ChapterPoems
+    },
+    {
+      path: '/chapter-seven-poems',
+      name: 'ChapterPoems',
+      component: ChapterPoems
+    },
+    {
+      path: '/chapter-eight-poems',
+      name: 'ChapterPoems',
+      component: ChapterPoems
+    },
+    {
+      path: '/chapter-nine-poems',
+      name: 'ChapterPoems',
+      component: ChapterPoems
+    },
+    {
       path: '/table-of-contents',
       name: "TableOfContentsPage",
       component: TableOfContentsPage,
@@ -95,8 +150,6 @@ const router = new Router({
       path: '*',
       component: StartPage
     } // catch all use case
-
-    //publicPath: "/"
   ]
 })
 

@@ -2,10 +2,10 @@
   <div>
     <div id="app" v-if="HomePage()">
       <Header />
-      <div class="content">
+      <div v-if="Navigation()" class="content">
         <Navigation />
       </div>
-      <Footer />
+      <Footer v-if="Navigation()" />
     </div>
     <router-view></router-view>
   </div>
@@ -25,20 +25,27 @@ export default {
   },
   methods: {
     HomePage() {
-      return Boolean(!this.$route.fullPath.includes("/table-of-contents"));
+      return Boolean(
+        !this.$route.fullPath.includes("/table-of-contents")
+      );
+    },
+    Navigation() {
+      return Boolean(!this.$route.fullPath.includes("poems"));
+    },
+    enableOverflow() {
+      return Boolean(this.$route.fullPath.includes("/chapters/chapter"));
     }
   }
 };
 </script>
 
 <style>
-
 body {
-  overflow: hidden;
   background: #212121;
   background-image: url(~@/assets/images/backgroundimg.png);
   font-family: "lighthaus";
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .content {

@@ -47,10 +47,14 @@ export default {
 };
 </script>
 
-<style scoped>
-body {
-  overflow-y: scroll;
+<style>
+@media screen and (max-width: 768px){}
+:root {
+  overflow: visible;
 }
+</style>
+
+<style scoped>
 #chapter-one-container {
   position: relative;
   color: white;
@@ -81,34 +85,32 @@ span {
 }
 
 @media screen and (max-width: 1200px) {
-
   .container-grid {
     grid-template-columns: repeat(3, min-content);
     grid-template-rows: repeat(12, 1fr);
   }
 
-@media screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) {
+    #chapter-one-container {
+      height: auto;
+      overflow-y: scroll;
+    }
 
-  #chapter-one-container {
-    height: auto;
-  }
-  
-  .container-grid {
-    margin-top: 108px;
-    height: auto;
-    grid-template-columns: repeat(1, min-content);
-    grid-template-rows: repeat(36, 1fr);
-    justify-items: center;
-  }
+    .container-grid {
+      margin-top: 108px;
+      height: auto;
+      grid-template-columns: repeat(1, min-content);
+      grid-template-rows: repeat(36, 1fr);
+      justify-items: center;
+    }
 
-  .container-grid pre {
-    font-size: calc(1em + 0.5vw);
-  }
+    .container-grid pre {
+      font-size: calc(1em + 0.5vw);
+    }
 
-  span {
-    color: #828282;
+    span {
+      color: #828282;
+    }
   }
-}
-
 }
 </style>

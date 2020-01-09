@@ -4,15 +4,15 @@ import Vuex from 'vuex';
 import animations from './animation';
 import pages from './page';
 import route from './route';
-
-
+import chapters from './chapter';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-    modules:{
+    modules: {
         animations,
         pages,
-        route
+        route,
+        chapters
     }
 })

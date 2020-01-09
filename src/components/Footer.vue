@@ -5,14 +5,25 @@
       <div class="footer-item item2">
         <p id="footer-title">2019</p>
       </div>
-      <div class="footer-item item3"></div>
+      <router-link :to="NavigateToChapterPoems()" tag="div" class="footer-item item3"></router-link>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Footer"
+  name: "Footer",
+  methods: {
+    NavigateToChapterPoems() {
+      const currentRouter = this.$route.fullPath;
+      if (currentRouter.includes("/chapter-")) {
+        const destinationRouter = `${currentRouter}-poems`;
+        return destinationRouter;
+      } else {
+        return "/";
+      }
+    }
+  }
 };
 </script>
 
@@ -25,6 +36,8 @@ export default {
 
 .footer-item {
   margin: auto 0;
+  z-index: 3;
+  position: relative;
 }
 
 .item1 {

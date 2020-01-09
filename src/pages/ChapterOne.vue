@@ -1,13 +1,15 @@
 <template>
-  <div style="position: absolute; width: 100%; height: 100%; left: 0%; top: 0%">
-    <div class="animHolder" id="intro">
-      <lottie :options="inOptions" v-on:animCreated="handleAnimation" />
-    </div>
-    <div class="animHolder" id="const">
-      <lottie :options="constOptions" v-on:animCreated="handleAnimationDelay" />
-    </div>
-    <div class="animHolder" id="outHolder">
-      <lottie :options="outOptions" v-on:animCreated="handleAnimationHold" />
+  <div>
+    <div style="position: absolute; width: 100%; height: 100%; left: 0%; top: 0%">
+      <div class="animHolder" id="intro">
+        <lottie :options="inOptions" v-on:animCreated="handleAnimation" />
+      </div>
+      <div class="animHolder" id="const">
+        <lottie :options="constOptions" v-on:animCreated="handleAnimationDelay" />
+      </div>
+      <div class="animHolder" id="outHolder">
+        <lottie :options="outOptions" v-on:animCreated="handleAnimationHold" />
+      </div>
     </div>
   </div>
 </template>

@@ -37,10 +37,13 @@ export default {
     return {};
   },
   methods: {
-    isStartPageCalled(){
+    isStartPageCalled() {
       return Boolean(this.$store.getters.isPageCalled);
+    },
+    enableOverflow() {
+      return Boolean(this.$route.fullPath.includes("/chapters/chapter"));
     }
-  },
+  }
 };
 </script>
 
@@ -72,7 +75,7 @@ export default {
   }
 }
 
-@-webkit-keyframes bounce-in{
+@-webkit-keyframes bounce-in {
   0% {
     transform: scaleY(0);
   }
@@ -81,7 +84,7 @@ export default {
   }
 }
 
-@-moz-keyframes bounce-in{
+@-moz-keyframes bounce-in {
   0% {
     transform: scaleY(0);
   }
@@ -90,7 +93,7 @@ export default {
   }
 }
 
-@-o-keyframes bounce-in{
+@-o-keyframes bounce-in {
   0% {
     transform: scaleY(0);
   }

@@ -26,6 +26,7 @@
               to="/chapter-one"
               tag="a"
               fill="white"
+              :class="{active: isActive}"
             >бросающий камни или камни саваоф</router-link>
             <bullet-character />
 
@@ -83,10 +84,13 @@ export default {
     BulletCharacter
   },
   data() {
-    return {};
+    return {
+      isActive: false
+    };
   },
   methods: {
     clickMenuTab() {
+      this.isActive = true;
       this.$store.dispatch("changePageStatus", false);
     }
   }
@@ -94,6 +98,15 @@ export default {
 </script>
 
 <style>
+.active {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(~@/assets/images/chapter-one-hover-element.svg);
+}
+
 .wrapper-menu {
   position: absolute;
   z-index: 2;
