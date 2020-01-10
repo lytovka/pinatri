@@ -24,7 +24,7 @@ export default {
     this.$store.dispatch("updateLastRoute", "");
   },
   beforeRouteLeave(to, from, next) {
-    if (to.name === "TableOfContents") next();
+    if (to.name === "TableOfContentsPage") next();
     else {
       setTimeout(() => {
         this.$store.dispatch("changePageStatus", false);
