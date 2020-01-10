@@ -24,7 +24,7 @@ export default {
 .header-item {
   position: relative;
   z-index: 3;
-  margin: auto 0;
+  margin: auto auto;
   cursor: pointer;
 }
 
@@ -40,8 +40,6 @@ export default {
 .item2 {
   width: 283px;
   height: 48px;
-  line-height: 48px;
-
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url(~@/assets/images/pinatri.svg);
@@ -51,21 +49,38 @@ export default {
   width: 40px;
   height: 29.52px;
   margin-right: 68px;
+  padding-left: 10px;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url(~@/assets/images/book_icon.svg);
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
+
+  .item1 {
+    margin-left: 60px; 
+  }
   .item2 {
-    display: none;
+    width: 224px;
+    height: 38px;
   }
-  .item1{
-    margin-left: 5px;
+  .item3 {
+    margin-right: 60px;
   }
-  .item3{
-    margin-right: 5px;
+
+}
+
+@media screen and (max-width: 500px) {
+  .item1 {
+    margin-left: 50px;
   }
+  .item2 {
+    visibility: hidden;
+  }
+  .item3 {
+    margin-right: 50px;
+  }
+
 }
 
 #header-title {

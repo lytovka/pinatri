@@ -16,7 +16,6 @@
 import Navigation from "./components/Navigation";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import HoverElement from "./components/HoverElement";
 
 export default {
   name: "App",
@@ -24,7 +23,6 @@ export default {
     Navigation,
     Header,
     Footer,
-    HoverElement
   },
   methods: {
     HomePage() {
