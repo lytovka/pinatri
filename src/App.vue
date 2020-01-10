@@ -2,10 +2,11 @@
   <div>
     <div v-if="HomePage()">
       <Header />
-      <div v-if="Navigation()" class="content">
+      <div v-if="displayNavigation()" class="content">
         <Navigation />
       </div>
-      <Footer v-if="Navigation()" />
+      <Footer v-if="displayNavigation()" />
+      <hover-element v-if="displayHover()"></hover-element>
     </div>
     <router-view></router-view>
   </div>
@@ -15,22 +16,28 @@
 import Navigation from "./components/Navigation";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import HoverElement from "./components/HoverElement";
 
 export default {
   name: "App",
   components: {
     Navigation,
     Header,
-    Footer
+    Footer,
+    HoverElement
   },
   methods: {
     HomePage() {
-      return Boolean(
-        !this.$route.fullPath.includes("/table-of-contents")
-      );
+      return Boolean(!this.$route.fullPath.includes("/table-of-contents"));
     },
-    Navigation() {
+    displayNavigation() {
       return Boolean(!this.$route.fullPath.includes("poems"));
+    },
+    displayHover() {
+      return Boolean(
+        this.$route.fullPath.includes("/chapter") &&
+          !this.$route.fullPath.includes("poems")
+      );
     },
     enableOverflow() {
       return Boolean(this.$route.fullPath.includes("/chapters/chapter"));
@@ -45,6 +52,7 @@ body {
   background-image: url(~@/assets/images/backgroundimg.png);
   font-family: "lighthaus";
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .content {

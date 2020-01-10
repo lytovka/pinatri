@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="overflow: hidden;">
     <div id="footer-container">
       <div class="footer-item item1"></div>
       <div class="footer-item item2">

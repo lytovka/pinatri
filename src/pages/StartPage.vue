@@ -35,12 +35,8 @@ export default {
 };
 </script>
 
-<style>
 
-.title-container {
-  position: relative;
-  padding-bottom: 55%;
-}
+<style>
 
 #start-page-title {
   z-index: 10;

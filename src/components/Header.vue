@@ -1,10 +1,8 @@
 <template>
-  <div>
+  <div style="overflow: hidden;">
     <div id="header-container">
       <div class="header-item item1"></div>
-      <div class="header-item item2">
-        <!-- <p id="header-title">PINATRI</p> -->
-      </div>
+      <router-link to="/" tag="div" class="header-item item2"></router-link>
       <router-link to="/table-of-contents" tag="div" class="header-item item3"></router-link>
     </div>
   </div>
@@ -56,6 +54,18 @@ export default {
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url(~@/assets/images/book_icon.svg);
+}
+
+@media screen and (max-width: 500px) {
+  .item2 {
+    display: none;
+  }
+  .item1{
+    margin-left: 5px;
+  }
+  .item3{
+    margin-right: 5px;
+  }
 }
 
 #header-title {

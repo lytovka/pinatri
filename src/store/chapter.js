@@ -4,7 +4,7 @@ export default {
             {
                 id: "/chapter-one",
                 number: "1",
-                name: "бросающий камни или камни саваоф"
+                name: "бросаю&shy;щий камни или камни саваоф"
             },
             {
                 id: "/chapter-two",
@@ -34,10 +34,10 @@ export default {
             {
                 id: "/chapter-seven",
                 number: "7",
-                name: "проделки путешественника"
+                name: `проделки путешествен&shy;ника`
             },
             {
-                id: "/chapter-eigth",
+                id: "/chapter-eight",
                 number: "8",
                 name: "масловка"
             },

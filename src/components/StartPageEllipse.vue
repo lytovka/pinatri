@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="overflow: hidden;">
     <div class="wrapper-ellipse">
       <transition name="fade" appear>
         <div v-if="isStartPageCalled()">
@@ -8,6 +8,7 @@
             viewBox="0 0 1484 632"
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
+            
           >
             <defs>
               <pattern id="image" patternUnits="userSpaceOnUse" height="100%" width="100%">
