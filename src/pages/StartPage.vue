@@ -9,7 +9,6 @@
 
 <script>
 import StartPageEllipse from "@/components/StartPageEllipse";
-
 export default {
   name: "StartPage",
   components: {
@@ -22,6 +21,7 @@ export default {
   beforeCreate() {
     this.$store.dispatch("changePageStatus", true);
     this.$store.dispatch("updateLastRoute", "");
+    document.body.style.overflow = "hidden";
   },
   beforeRouteLeave(to, from, next) {
     if (to.name === "TableOfContentsPage") next();

@@ -43,7 +43,10 @@
 
 <script>
 export default {
-  name: "ChapterOneContents"
+  name: "ChapterOneContents",
+  beforeCreate() {
+    document.body.style.overflow = "auto";
+  },
 };
 </script>
 

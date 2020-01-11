@@ -51,6 +51,8 @@ body {
   font-family: "lighthaus";
   box-sizing: border-box;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .content {

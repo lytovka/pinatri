@@ -58,7 +58,9 @@ export default {
       this.animOut = anim;
     }
   },
-
+  beforeCreate() {
+    document.body.style.overflow = "hidden";
+  },
   beforeRouteLeave(to, from, next) {
     const self = this;
 

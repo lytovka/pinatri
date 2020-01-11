@@ -63,7 +63,9 @@ export default {
 
   beforeDestroy() {},
   destroyed() {},
-
+  beforeCreate() {
+    document.body.style.overflow = "hidden";
+  },
   beforeRouteLeave(to, from, next) {
     const self = this;
 

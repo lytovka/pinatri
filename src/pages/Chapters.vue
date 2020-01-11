@@ -33,10 +33,12 @@
 </template>
 
 <script>
-document.body.style.overflow = "auto";
 export default {
   name: "Chapters",
-  methods: {}
+  methods: {},
+  beforeCreate() {
+    document.body.style.overflow = "auto";
+  }
 };
 </script>
 
