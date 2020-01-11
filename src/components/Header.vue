@@ -1,5 +1,5 @@
 <template>
-  <div style="overflow: hidden;">
+  <div>
     <div id="header-container">
       <div class="header-item item1"></div>
       <router-link to="/" tag="div" class="header-item item2"></router-link>

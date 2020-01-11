@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="overflow:hidden;">
     <div v-if="HomePage()">
       <Header />
       <div v-if="displayNavigation()" class="content">
@@ -52,7 +52,7 @@ body {
   background-image: url(~@/assets/images/backgroundimg.png);
   font-family: "lighthaus";
   box-sizing: border-box;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .content {
