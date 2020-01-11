@@ -1,5 +1,5 @@
 <template>
-  <div class="main-wrapper">
+  <div>
     <div class="wrapper-ellipse">
       <transition name="fade" appear>
         <div v-if="isStartPageCalled()">
@@ -49,16 +49,13 @@ export default {
 </script>
 
 <style>
-.main-wrapper{
-  position: relative;
-}
 
 .wrapper-ellipse {
   position: absolute;
   z-index: 1;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -100%);
+  transform: translate(-50%, -50%);
   width: 74.9vw;
   height: 32vw;
 }

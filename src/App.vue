@@ -16,7 +16,6 @@
 import Navigation from "./components/Navigation";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import HoverElement from "./components/HoverElement";
 
 export default {
   name: "App",
@@ -24,7 +23,6 @@ export default {
     Navigation,
     Header,
     Footer,
-    HoverElement
   },
   methods: {
     HomePage() {
@@ -52,7 +50,9 @@ body {
   background-image: url(~@/assets/images/backgroundimg.png);
   font-family: "lighthaus";
   box-sizing: border-box;
-  /* overflow: hidden; */
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .content {

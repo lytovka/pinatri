@@ -19,6 +19,9 @@ export default {
       currentChapter: null
     };
   },
+  beforeCreate() {
+    document.body.style.overflowY = "auto";
+  },
   created() {
     this.currentChapter = this.$store.getters.getChapters.find(c =>
       this.$route.fullPath.startsWith(c.id)

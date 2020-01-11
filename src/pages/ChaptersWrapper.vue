@@ -55,10 +55,10 @@ export default {
 #arrow-left {
   z-index: 4;
   position: absolute;
-  left: 47.08%;
-  right: 51.04%;
-  top: 6.48%;
-  bottom: 90.19%;
+  top: 5.93%;
+  left: 50%;
+  padding-right: 72px;
+  transform: translateX(-50%);
   width: 36px;
   height: 36px;
   cursor: pointer;
@@ -69,22 +69,23 @@ export default {
 
 p {
   position: absolute;
-  left: 110.64%;
-  top: -30.17%;
-  color: white;
+  line-height: 2px;
+  margin-left: 36px;
+  color:white;
   font-size: 18px;
-  text-transform: capitalize;
 }
 
 @media screen and (max-width: 450px) {
+  p {
+    display: none;
+  }
+
   #arrow-left {
-    left: 87.78%;
+    padding-right: 0;
     right: 5.56%;
+    left: 87.78%;
     top: 3.12%;
     bottom: 93.12%;
-  }
-  p{
-    display: none;
   }
 }
 </style>

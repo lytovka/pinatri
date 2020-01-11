@@ -44,6 +44,8 @@ export default {
   width: 23.54px;
   height: 34px;
   margin-left: 77px;
+  padding-right: 18.52px;
+  margin-top: 12px;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url(~@/assets/images/mask_icon.svg);
@@ -59,7 +61,7 @@ export default {
 .item3 {
   width: 42.06px;
   height: 46px;
-  margin-right: 67.94px;
+  margin-right: 77px;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url(~@/assets/images/arrow_icon.svg);
@@ -71,5 +73,24 @@ export default {
   margin-bottom: 68px;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .item1 {
+    margin-left: 60px;
+  }
+  .item3 {
+    margin-right: 60px;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  .item1 {
+    margin-left: 50px;
+  }
+  .item3 {
+    margin-right: 50px;
+  }
 }
 </style>
