@@ -86,11 +86,14 @@ export default {
 }
 
 @media screen and (max-width: 500px) {
+  #footer-container {
+    margin-top: 48px;
+  }
   .item1 {
-    margin-left: 50px;
+    margin-left: 20px;
   }
   .item3 {
-    margin-right: 50px;
+    margin-right: 20px;
   }
 }
 </style>

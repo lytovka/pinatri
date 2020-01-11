@@ -71,14 +71,20 @@ export default {
 }
 
 @media screen and (max-width: 500px) {
+
+  #header-container {
+    margin-top: 20px;
+    margin-bottom: 28px;
+  }
+
   .item1 {
-    margin-left: 50px;
+    margin-left: 20px;
   }
   .item2 {
     visibility: hidden;
   }
   .item3 {
-    margin-right: 50px;
+    margin-right: 20px;
   }
 
 }
