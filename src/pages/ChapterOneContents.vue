@@ -45,17 +45,11 @@
 export default {
   name: "ChapterOneContents",
   beforeCreate() {
-    document.body.style.overflow = "auto";
+    document.body.style.overflowY = "auto";
+    document.body.style.overflowX = "hidden";
   },
 };
 </script>
-
-<style>
-@media screen and (max-width: 768px){}
-:root {
-  overflow: visible;
-}
-</style>
 
 <style scoped>
 .chapter-one-container {
@@ -92,15 +86,14 @@ span {
     grid-template-columns: repeat(3, min-content);
     grid-template-rows: repeat(12, 1fr);
   }
-
+}
   @media screen and (max-width: 768px) {
     .chapter-one-container {
       height: auto;
-      overflow-y: scroll;
     }
 
     .container-grid {
-      margin-top: 108px;
+      margin-top: 60px;
       height: auto;
       grid-template-columns: repeat(1, min-content);
       grid-template-rows: repeat(36, 1fr);
@@ -108,12 +101,11 @@ span {
     }
 
     .container-grid pre {
-      font-size: calc(1em + 0.5vw);
+      font-size: calc(0.8em + 0.5vw);
     }
 
     span {
       color: #828282;
     }
   }
-}
 </style>

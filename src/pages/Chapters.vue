@@ -37,7 +37,7 @@ export default {
   name: "Chapters",
   methods: {},
   beforeCreate() {
-    document.body.style.overflow = "auto";
+    document.body.style.overflowY = "auto";
   }
 };
 </script>
