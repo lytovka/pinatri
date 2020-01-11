@@ -33,6 +33,7 @@
 </template>
 
 <script>
+document.body.style.overflow = "auto";
 export default {
   name: "Chapters",
   methods: {}
@@ -40,31 +41,17 @@ export default {
 </script>
 
 <style scoped>
-#arrow-left {
-  z-index: 4;
-  position: absolute;
-  left: 47.08%;
-  right: 51.04%;
-  top: 6.48%;
-  bottom: 90.19%;
-  width: 36px;
-  height: 36px;
-  cursor: pointer;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url(~@/assets/images/arrow-left.svg);
-}
 
 #chapters-container {
   position: absolute;
   left: 0%;
-  top: 0%;
+  top: calc(5.93% + 72px);
   z-index: 2;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   display: flex;
-  height: 100vh;
+  height: auto;
   width: 100vw;
   line-height: 0px;
 }
@@ -92,12 +79,15 @@ p {
 }
 
 @media (max-width: 768px) {
-  #table-of-contents-container {
-    flex-wrap: wrap;
-  }
 
   .chapters-item {
     font-size: 24px;
+  }
+}
+
+@media (max-width: 450px) {
+  #chapters-container {
+    top: calc(3.12% + 36px);
   }
 }
 
