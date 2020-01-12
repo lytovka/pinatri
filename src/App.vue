@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="overflow:hidden;">
     <div v-if="HomePage()">
       <Header />
       <div v-if="displayNavigation()" class="content">
