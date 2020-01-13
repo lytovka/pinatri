@@ -27,10 +27,6 @@ export default {
     if (to.name === "TableOfContentsPage") next();
     else {
       this.$store.dispatch("changePageStatus", false);
-      console.log(this.$store.getters.isPageCalled, "SETCHECK");
-      console.log(this.$store.getters.isPageCalled, "SETCHECK");
-      console.log(this.$store.getters.isPageCalled, "SETCHECK");
-      console.log(this.$store.getters.isPageCalled, "SETCHECK");
       setTimeout(()=> {
         next();
       },2000)

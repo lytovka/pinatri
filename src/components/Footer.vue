@@ -1,6 +1,6 @@
 <template>
   <div style="overflow: hidden;">
-    <div id="footer-container">
+    <div id="footer-container" :style="this.$store.getters.isAnimationActive ? 'pointer-events: none;' : ''">
       <div class="footer-item item1"></div>
       <div class="footer-item item2">
         <p id="footer-title">2019</p>
