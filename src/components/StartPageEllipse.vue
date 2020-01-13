@@ -2,7 +2,7 @@
   <div>
     <div class="wrapper-ellipse">
       <transition name="fade" appear>
-        <div v-if="isStartPageCalled()">
+        <div v-show="isStartPageCalled()">
           <svg
             class="container-ellipse"
             viewBox="0 0 1484 632"

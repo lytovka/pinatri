@@ -18,7 +18,6 @@
         <text dy="30" font-size="1.84375rem" letter-spacing="1px" fill="white" textLength="302%">
           <textPath
             :style="this.$store.getters.isAnimationActive ? 'pointer-events: none;' : ''"
-            class="menu-animation"
             xlink:href="#curve"
           >
             <router-link
@@ -65,7 +64,24 @@
               dur="100s"
               repeatCount="indefinite"
             />
-            <animate v-else attributeName="startOffset" from="0" to="100" dur="1s" repeatCount="1" />
+            <!-- or from="0" to="3450" -->
+            <!-- <animate
+              v-if="!(this.$store.getters.isPageCalled)"
+              attributeName="startOffset"
+              from="0%"
+              to="50%"
+              dur="2s"
+              repeatCount="1"
+            />  -->
+
+            <!-- <animate
+              v-else
+              attributeName="startOffset"
+              from="0%"
+              to="50%"
+              dur="1s"
+              repeatCount="1"
+            /> -->
           </textPath>
         </text>
       </svg>
@@ -93,6 +109,9 @@ export default {
       this.isActive = true;
       this.$store.dispatch("changePageStatus", false);
     }
+  },
+  updated() {
+    console.log("start page", this.$store.getters.isPageCalled);
   }
 };
 </script>

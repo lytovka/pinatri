@@ -22,7 +22,7 @@ export default {
   components: {
     Navigation,
     Header,
-    Footer,
+    Footer
   },
   methods: {
     HomePage() {
@@ -39,6 +39,15 @@ export default {
     },
     enableOverflow() {
       return Boolean(this.$route.fullPath.includes("/chapters/chapter"));
+    }
+  },
+  created(){
+    if (this.$route.fullPath.includes("chapter")) {
+      this.$store.dispatch("changePageStatus", false);
+    }
+    else{
+      this.$store.dispatch("changePageStatus", false);
+
     }
   }
 };

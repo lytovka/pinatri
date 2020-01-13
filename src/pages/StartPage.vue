@@ -26,10 +26,14 @@ export default {
   beforeRouteLeave(to, from, next) {
     if (to.name === "TableOfContentsPage") next();
     else {
-      setTimeout(() => {
-        this.$store.dispatch("changePageStatus", false);
+      this.$store.dispatch("changePageStatus", false);
+      console.log(this.$store.getters.isPageCalled, "SETCHECK");
+      console.log(this.$store.getters.isPageCalled, "SETCHECK");
+      console.log(this.$store.getters.isPageCalled, "SETCHECK");
+      console.log(this.$store.getters.isPageCalled, "SETCHECK");
+      setTimeout(()=> {
         next();
-      }, 1000);
+      },2000)
     }
   }
 };

@@ -69,6 +69,9 @@ export default {
   beforeRouteLeave(to, from, next) {
     const self = this;
 
+    console.log("animation", this.$data.animOut);
+    console.log("animation", this.$data.animConst);
+    
     if (to.name === "TableOfContentsPage" || to.name === "ChapterPoems") {
       this.$data.animConst.destroy();
       next();
@@ -77,7 +80,8 @@ export default {
 
       var holderLeaving = this.$data.animConst;
       var holderOut = this.$data.animOut;
-
+      holderLeaving.playSpeed = 10;
+      holderOut.playSpeed = 0.5;
       this.$data.animConst.addEventListener("loopComplete", function() {
         document.getElementById("outHolder").style.opacity = "1";
         holderOut.play();
