@@ -98,6 +98,8 @@ export default {
 }
 
 .button-wrapper {
+  position: relative;
+  z-index: 5;
   margin: 0 auto;
   width: 180px;
   padding: 5% 0;

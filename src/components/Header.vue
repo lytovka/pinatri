@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="header-container">
+    <div id="header-container" :style="this.$store.getters.isAnimationActive ? 'pointer-events: none;' : ''">
       <div class="header-item item1"></div>
       <router-link to="/" tag="div" class="header-item item2"></router-link>
       <router-link to="/table-of-contents" tag="div" class="header-item item3"></router-link>

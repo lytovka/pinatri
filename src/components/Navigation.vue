@@ -56,32 +56,17 @@
             <menu-link menuLinkName="не про то" menuLinkEndpointName="/chapter-nine" />
             <tspan dy="20" font-size="100px">&#8226;</tspan>
 
-            <animate
-              v-if="this.$store.getters.isPageCalled"
-              attributeName="startOffset"
-              from="0%"
-              to="50%"
-              dur="100s"
-              repeatCount="indefinite"
-            />
-            <!-- or from="0" to="3450" -->
-            <!-- <animate
-              v-if="!(this.$store.getters.isPageCalled)"
-              attributeName="startOffset"
-              from="0%"
-              to="50%"
-              dur="2s"
-              repeatCount="1"
-            />  -->
-
-            <!-- <animate
-              v-else
-              attributeName="startOffset"
-              from="0%"
-              to="50%"
-              dur="1s"
-              repeatCount="1"
-            /> -->
+            <transition v-on:enter="enter" v-on:leave="leave" v-bind:css="false">
+              <animate
+                v-if="this.$store.getters.isPageCalled"
+                attributeName="startOffset"
+                from="0%"
+                to="50%"
+                dur="100s"
+                repeatCount="indefinite"
+              />
+            </transition>
+            
           </textPath>
         </text>
       </svg>
@@ -108,6 +93,21 @@ export default {
     clickMenuTab() {
       this.isActive = true;
       this.$store.dispatch("changePageStatus", false);
+    },
+    enter: function(el, done) {
+      console.log('enter the transition', el);
+      done();
+    },
+    leave: function(el, done) {
+      const fromWhere = el.getAttribute("from");
+      el.setAttribute("repeatCount", '100');
+      el.setAttribute("dur", "2s");
+      el.setAttribute("from", fromWhere);
+
+      console.log('leaving the transition', el);
+      setTimeout(() => {
+        done();
+      }, 3000);
     }
   },
   updated() {
