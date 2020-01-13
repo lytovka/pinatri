@@ -98,6 +98,9 @@ export default {
       console.log('enter the transition', el);
       done();
     },
+
+    // Danya Kotov Lox
+
     leave: function(el, done) {
       const fromWhere = el.getAttribute("from");
       el.setAttribute("repeatCount", '100');
