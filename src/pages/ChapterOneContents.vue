@@ -79,8 +79,10 @@ export default {
 </script>
 
 <style scoped>
-p {
-  padding: 5% 0 0 2%;
+.title p {
+  /*padding: 5% 0 0 2%;*/
+  padding-top: 48px;
+  padding-bottom: 24px;
 }
 
 .title {
@@ -141,18 +143,33 @@ span {
 }
 
 @media screen and (max-width: 1200px) {
+  .chapter-one-container {
+    padding-top: 25px;
+  }
   .container-grid {
     grid-template-columns: repeat(3, min-content);
     grid-template-rows: repeat(12, 1fr);
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .title p {
+    padding-top: 56px;
+    font-size: 40px;
+  }
+}
+
 @media screen and (max-width: 768px) {
+  .title p {
+    padding-bottom: 0px;
+  }
   .chapter-one-container {
     height: auto;
+    padding-top: 0px;
   }
 
   .container-grid {
-    margin-top: 60px;
+    /*margin-top: 60px;*/
     height: auto;
     grid-template-columns: repeat(1, min-content);
     grid-template-rows: repeat(36, 1fr);

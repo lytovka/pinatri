@@ -14,9 +14,9 @@
 
 <script>
 import Lottie from "./lottie.vue";
-import * as inData from "../assets/animations/fiveIn.json";
-import * as constData from "../assets/animations/fiveConst.json";
-import * as outData from "../assets/animations/fiveOut.json";
+import * as inData from "../assets/animations/newFiveIn.json";
+import * as constData from "../assets/animations/newFiveConst.json";
+import * as outData from "../assets/animations/newFiveOut.json";
 
 export default {
   name: "ChapterFive",
