@@ -38,8 +38,8 @@ export default {
 }
 
 .item2 {
-  width: 283px;
-  height: 48px;
+  width: 224px;
+  height: 38px;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url(~@/assets/images/pinatri.svg);

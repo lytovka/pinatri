@@ -98,19 +98,25 @@ export default {
 }
 
 .button-wrapper {
-  margin: 0 auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 60px;
   width: 180px;
-  padding: 5% 0;
 }
 
 .read-button {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
   border: 1px solid #ffffff;
   box-sizing: border-box;
   border-radius: 25px;
   background: none;
   padding: 10px 30px;
   color: white;
-  margin: 0 auto;
+  
 }
 
 .chapter-one-container {
@@ -146,6 +152,10 @@ span {
   .chapter-one-container {
     padding-top: 25px;
   }
+
+  .button-wrapper {
+    margin-top: 100px; 
+  }
   .container-grid {
     grid-template-columns: repeat(3, min-content);
     grid-template-rows: repeat(12, 1fr);
@@ -160,6 +170,10 @@ span {
 }
 
 @media screen and (max-width: 768px) {
+
+  .button-wrapper {
+    margin-top: 0px;
+  }
   .title p {
     padding-bottom: 0px;
   }

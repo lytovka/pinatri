@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="width=100vw">
     <div class="poem-chapter-container">
       <div class="svg-element" :class="`number${currentChapter.number}`"></div>
       <div id="asterisk" class="svg-element"></div>
@@ -33,7 +33,7 @@ export default {
 
 <style scoped>
 .poem-chapter-container {
-  padding: 5% 0 0 0;
+  padding-top: 30px;
 }
 
 .svg-element {
@@ -45,8 +45,8 @@ export default {
 
 .number1 {
   background-image: url(~@/assets/images/chapter-one-title.svg);
-  width: 180px;
-  height: 79.61px;
+  width: 100px;
+  height: 44.2px;
 }
 .number2 {
   background-image: url(~@/assets/images/chapter-two-title.svg);
@@ -94,6 +94,8 @@ export default {
   z-index: 2;
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 15px;
 }
 
 .secondary-svg {
@@ -101,16 +103,17 @@ export default {
   z-index: 2;
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .main-svg1 {
   background-image: url(~@/assets/images/main-svg-chapter-one.svg);
 
   /* Align every svg element individually. START HERE*/
-  width: 40%;
-  height: 60%;
-  left: 40%;
-  top: 40%;
+  width: 340px;
+  height: 510px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .main-svg2 {
@@ -180,20 +183,20 @@ export default {
 }
 
 .secondary-svg1-1 {
+  width: 13.28vw;
+  height: 20vw;
   background-image: url(~@/assets/images/secondary-svg-chapter-1-one.svg);
-  width: calc(200px + 15vw);
-  height: calc(200px + 15vh);
-  left: 0%;
-  top: 70%;
+  left: 0px;
+  top: 50%;
 }
 
 .secondary-svg1-2 {
+  width: 26.28vw;
+  height: 28vw;
   z-index: -1;
   background-image: url(~@/assets/images/secondary-svg-chapter-1-two.svg);
-  width: calc(200px + 15vw);
-  height: calc(200px + 15vh);
-  bottom: 40%;
-  right: -3%;
+  right: 0px;
+  top: 15%;
 }
 
 .secondary-svg2-1 {
@@ -355,37 +358,56 @@ export default {
   color: white;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   #chapter-title {
     font-size: 72px;
   }
+
+  .main-svg1 {
+    background-image: url(~@/assets/images/main-svg-chapter-one.svg);
+    width: 280px;
+    height: 420px;
+    left: 50%;
+    transform: translateX(-50%);
+}
 }
 
-@media screen and (max-width: 450px) {
-  .main-svg1,
-  .main-svg2,
-  .main-svg3,
-  .main-svg4,
-  .main-svg5,
-  .main-svg6,
-  .main-svg6,
-  .main-svg7,
-  .main-svg8,
-  .main-svg9 {
-    display: none;
-  }
-
+@media screen and (max-width: 1000px) {
   #chapter-title {
-    font-size: 48px;
-    padding: 100px 0;
+    font-size: 55px;
   }
 
-  .secondary-svg2-1 {
-    top: 50%;
+  .main-svg1 {
+    background-image: url(~@/assets/images/main-svg-chapter-one.svg);
+    width: 206px;
+    height: 310px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+}
+@media screen and (max-width: 768px) {
+  #chapter-title {
+    font-size: 45px;
   }
+  .main-svg1 {
+    background-image: url(~@/assets/images/main-svg-chapter-one.svg);
+    width: 166px;
+    height: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
 
-  .secondary-svg2-2 {
-    bottom: 30%;
+@media screen and (max-width: 590px) {
+  #chapter-title {
+    font-size: 35px;
+  }
+  .main-svg1 {
+    background-image: url(~@/assets/images/main-svg-chapter-one.svg);
+    width: 166px;
+    height: 250px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
