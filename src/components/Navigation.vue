@@ -99,18 +99,16 @@ export default {
       done();
     },
 
-    // Danya Kotov Lox
-
     leave: function(el, done) {
       const fromWhere = el.getAttribute("from");
-      el.setAttribute("repeatCount", '100');
-      el.setAttribute("dur", "2s");
+      el.setAttribute("repeatCount", '50');
+      el.setAttribute("dur", "1s");
       el.setAttribute("from", fromWhere);
 
       console.log('leaving the transition', el);
       setTimeout(() => {
         done();
-      }, 3000);
+      }, 1500);
     }
   },
   updated() {

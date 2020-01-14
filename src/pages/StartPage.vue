@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-cloak>
     <div id="group21"></div>
     <div id="group2"></div>
     <div id="start-page-title"></div>
@@ -27,9 +27,9 @@ export default {
     if (to.name === "TableOfContentsPage") next();
     else {
       this.$store.dispatch("changePageStatus", false);
-      setTimeout(()=> {
+      setTimeout(() => {
         next();
-      },2000)
+      }, 1000);
     }
   }
 };
@@ -37,6 +37,9 @@ export default {
 
 
 <style>
+[v-cloak] > * {
+  display: none;
+}
 
 #start-page-title {
   z-index: 10;
