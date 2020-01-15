@@ -23,13 +23,15 @@ export default {
     this.$store.dispatch("updateLastRoute", "");
     document.body.style.overflow = "hidden";
   },
+  destroyed() {
+    this.$store.dispatch("changePageStatus", false);
+  },
   beforeRouteLeave(to, from, next) {
     if (to.name === "TableOfContentsPage") next();
     else {
-      this.$store.dispatch("changePageStatus", false);
       setTimeout(() => {
         next();
-      }, 1000);
+      }, 2000);
     }
   }
 };

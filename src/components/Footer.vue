@@ -2,7 +2,7 @@
   <div style="overflow: hidden;">
     <div id="footer-container" :style="this.$store.getters.isAnimationActive ? 'pointer-events: none;' : ''">
       <div class="footer-item item1"></div>
-      <div class="footer-item item2">
+      <div class="item2">
         <p id="footer-title">2019</p>
       </div>
       <router-link :to="NavigateToChapterPoems()" tag="div" class="footer-item item3"></router-link>
@@ -38,6 +38,7 @@ export default {
   margin: auto 0;
   z-index: 3;
   position: relative;
+  cursor: pointer;
 }
 
 .item1 {

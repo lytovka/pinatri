@@ -25,7 +25,6 @@
               to="/chapter-one"
               tag="a"
               fill="white"
-              :class="{active: isActive}"
             >бросающий камни или камни саваоф</router-link>
             <bullet-character />
 
@@ -66,7 +65,6 @@
                 repeatCount="indefinite"
               />
             </transition>
-            
           </textPath>
         </text>
       </svg>
@@ -95,24 +93,27 @@ export default {
       this.$store.dispatch("changePageStatus", false);
     },
     enter: function(el, done) {
-      console.log('enter the transition', el);
+      console.log("enter the transition", el);
       done();
     },
 
     leave: function(el, done) {
-      const fromWhere = el.getAttribute("from");
-      el.setAttribute("repeatCount", '50');
-      el.setAttribute("dur", "1s");
-      el.setAttribute("from", fromWhere);
-
-      console.log('leaving the transition', el);
+      console.log("setAttribute", el.getAttribute("from"));
+      el.setAttribute("from", "0%");
+      el.setAttribute("dur", "3s");
+      el.setAttribute("repeatCount", "indefinite");
+      console.log("leaving the transition", el);
       setTimeout(() => {
         done();
-      }, 1500);
+      }, 1000);
     }
   },
   updated() {
     console.log("start page", this.$store.getters.isPageCalled);
+  },
+  beforeRouteUpdate(to, from, next){
+    console.log(to, from);
+    next();
   }
 };
 </script>
