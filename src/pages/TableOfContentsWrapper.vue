@@ -50,6 +50,7 @@ export default {
   opacity: 0.2;
   filter: blur(5px);
   color: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
 }
 
 #table-of-contents-back-button {

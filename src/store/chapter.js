@@ -25,42 +25,57 @@ export default {
             {
                 id: "/chapter-two",
                 number: "2",
-                name: "как я ем собаку"
+                name: "как я ем собаку",
+                poems: ["Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum"]
             },
             {
                 id: "/chapter-three",
                 number: "3",
-                name: "моё богатство — люди"
+                name: "моё богатство — люди",
+                poems: ["Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum"]
+
             },
             {
                 id: "/chapter-four",
                 number: "4",
-                name: "герои быта"
+                name: "герои быта",
+                poems: ["Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum"]
+
             },
             {
                 id: "/chapter-five",
                 number: "5",
-                name: "разный навсегда"
+                name: "разный навсегда",
+                poems: ["Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum"]
+
             },
             {
                 id: "/chapter-six",
                 number: "6",
-                name: "на новенького"
+                name: "на новенького",
+                poems: ["Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum"]
+
             },
             {
                 id: "/chapter-seven",
                 number: "7",
-                name: `проделки путешествен&shy;ника`
+                name: `проделки путешествен&shy;ника`,
+                poems: ["Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum"]
+
             },
             {
                 id: "/chapter-eight",
                 number: "8",
-                name: "масловка"
+                name: "масловка",
+                poems: ["Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum"]
+
             },
             {
                 id: "/chapter-nine",
                 number: "9",
-                name: "не про то"
+                name: "не про то",
+                poems: ["Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum"]
+
             }
         ]
     },

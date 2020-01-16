@@ -17,7 +17,7 @@ import ChapterPoems from '@/pages/ChapterPoems'
 
 import TableOfContentsPage from '@/pages/TableOfContentsWrapper'
 import Chapters from '@/pages/ChaptersWrapper'
-import ChapterOneContents from '@/pages/ChapterOneContents'
+import ChapterContents from '@/pages/ChapterContents'
 
 
 
@@ -139,8 +139,48 @@ const router = new Router({
           children: [
             {
               path: "chapter-one",
-              name: "ChapterOneContents",
-              component: ChapterOneContents
+              name: "ChapterContents",
+              component: ChapterContents
+            },
+            {
+              path: "chapter-two",
+              name: "ChapterContents",
+              component: ChapterContents
+            },
+            {
+              path: "chapter-three",
+              name: "ChapterContents",
+              component: ChapterContents
+            },
+            {
+              path: "chapter-four",
+              name: "ChapterContents",
+              component: ChapterContents
+            },
+            {
+              path: "chapter-five",
+              name: "ChapterContents",
+              component: ChapterContents
+            },
+            {
+              path: "chapter-six",
+              name: "ChapterContents",
+              component: ChapterContents
+            },
+            {
+              path: "chapter-seven",
+              name: "ChapterContents",
+              component: ChapterContents
+            },
+            {
+              path: "chapter-eight",
+              name: "ChapterContents",
+              component: ChapterContents
+            },
+            {
+              path: "chapter-nine",
+              name: "ChapterContents",
+              component: ChapterContents
             }
           ]
         }

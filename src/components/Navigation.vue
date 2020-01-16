@@ -99,13 +99,12 @@ export default {
 
     leave: function(el, done) {
       console.log("setAttribute", el.getAttribute("from"));
-      el.setAttribute("from", "0%");
       el.setAttribute("dur", "3s");
       el.setAttribute("repeatCount", "indefinite");
       console.log("leaving the transition", el);
       setTimeout(() => {
         done();
-      }, 1000);
+      }, 2000);
     }
   },
   updated() {
