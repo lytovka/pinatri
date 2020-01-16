@@ -20,8 +20,6 @@ import Chapters from '@/pages/ChaptersWrapper'
 import ChapterContents from '@/pages/ChapterContents'
 
 
-
-
 Vue.use(Router)
 
 const router = new Router({
@@ -138,47 +136,7 @@ const router = new Router({
           component: Chapters,
           children: [
             {
-              path: "chapter-one",
-              name: "ChapterContents",
-              component: ChapterContents
-            },
-            {
-              path: "chapter-two",
-              name: "ChapterContents",
-              component: ChapterContents
-            },
-            {
-              path: "chapter-three",
-              name: "ChapterContents",
-              component: ChapterContents
-            },
-            {
-              path: "chapter-four",
-              name: "ChapterContents",
-              component: ChapterContents
-            },
-            {
-              path: "chapter-five",
-              name: "ChapterContents",
-              component: ChapterContents
-            },
-            {
-              path: "chapter-six",
-              name: "ChapterContents",
-              component: ChapterContents
-            },
-            {
-              path: "chapter-seven",
-              name: "ChapterContents",
-              component: ChapterContents
-            },
-            {
-              path: "chapter-eight",
-              name: "ChapterContents",
-              component: ChapterContents
-            },
-            {
-              path: "chapter-nine",
+              path: ":id",
               name: "ChapterContents",
               component: ChapterContents
             }
