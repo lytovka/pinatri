@@ -43,6 +43,7 @@ export default {
 <style scoped>
 .semiActive {
   position: relative;
+  pointer-events: none;
   opacity: 0.2;
   filter: blur(5px);
   color: rgba(255, 255, 255, 0.1);

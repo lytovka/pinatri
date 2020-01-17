@@ -4,30 +4,30 @@
       <router-link class="chapters-item" to="/table-of-contents/chapters/chapter-one" tag="div">
         <p>бросающий камни или камни саваоф</p>
       </router-link>
-      <div class="chapters-item">
+      <router-link class="chapters-item" to="/table-of-contents/chapters/chapter-two" tag="div">
         <p>как я ем собаку</p>
-      </div>
-      <div class="chapters-item">
+      </router-link>
+      <router-link class="chapters-item" to="/table-of-contents/chapters/chapter-three" tag="div">
         <p>моё богатство — люди</p>
-      </div>
-      <div class="chapters-item">
+      </router-link>
+      <router-link class="chapters-item" to="/table-of-contents/chapters/chapter-four" tag="div">
         <p>герои быта</p>
-      </div>
-      <div class="chapters-item">
+      </router-link>
+      <router-link class="chapters-item" to="/table-of-contents/chapters/chapter-five" tag="div">
         <p>разный навсегда</p>
-      </div>
-      <div class="chapters-item">
+      </router-link>
+      <router-link class="chapters-item" to="/table-of-contents/chapters/chapter-six" tag="div">
         <p>на новенького</p>
-      </div>
-      <div class="chapters-item">
+      </router-link>
+      <router-link class="chapters-item" to="/table-of-contents/chapters/chapter-seven" tag="div">
         <p>проделки путешественника</p>
-      </div>
-      <div class="chapters-item">
+      </router-link>
+      <router-link class="chapters-item" to="/table-of-contents/chapters/chapter-eight" tag="div">
         <p>масловка</p>
-      </div>
-      <div class="chapters-item">
+      </router-link>
+      <router-link class="chapters-item" to="/table-of-contents/chapters/chapter-nine" tag="div">
         <p>не про то</p>
-      </div>
+      </router-link>
     </div>
   </div>
 </template>
@@ -43,7 +43,6 @@ export default {
 </script>
 
 <style scoped>
-
 #chapters-container {
   position: absolute;
   left: 0%;
@@ -81,7 +80,6 @@ p {
 }
 
 @media (max-width: 768px) {
-
   .chapters-item {
     font-size: 24px;
   }

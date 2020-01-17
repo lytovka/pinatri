@@ -17,9 +17,7 @@ import ChapterPoems from '@/pages/ChapterPoems'
 
 import TableOfContentsPage from '@/pages/TableOfContentsWrapper'
 import Chapters from '@/pages/ChaptersWrapper'
-import ChapterOneContents from '@/pages/ChapterOneContents'
-
-
+import ChapterContents from '@/pages/ChapterContents'
 
 
 Vue.use(Router)
@@ -138,9 +136,9 @@ const router = new Router({
           component: Chapters,
           children: [
             {
-              path: "chapter-one",
-              name: "ChapterOneContents",
-              component: ChapterOneContents
+              path: ":id",
+              name: "ChapterContents",
+              component: ChapterContents
             }
           ]
         }
