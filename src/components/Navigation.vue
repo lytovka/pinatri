@@ -99,9 +99,10 @@ export default {
 
     leave: function(el, done) {
       console.log("setAttribute", el.getAttribute("from"));
-      el.setAttribute("from", "0%");
-      el.setAttribute("dur", "3s");
-      el.setAttribute("repeatCount", "indefinite");
+      /*el.setAttribute("from", "0%");
+      el.setAttribute("dur", "10s");
+      el.setAttribute("repeatCount", "1");*/
+      el.setAttribute("to", "150%");
       console.log("leaving the transition", el);
       setTimeout(() => {
         done();
