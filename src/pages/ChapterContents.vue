@@ -78,7 +78,9 @@ export default {
   background-repeat: no-repeat;
   cursor: pointer;
 }
-
+button {
+  cursor: pointer;
+}
 .button-wrapper {
   position: relative;
   left: 50%;
@@ -86,7 +88,9 @@ export default {
   margin-top: 60px;
   width: 180px;
 }
-
+.button-wrapper:hover {
+  cursor: pointer;
+}
 .read-button {
   position: relative;
   left: 50%;
