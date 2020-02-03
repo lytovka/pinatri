@@ -1,6 +1,12 @@
 <template>
   <div>
     <div style="position: absolute; width: 100%; height: 100%; left: 0%; top: 0%">
+      <div class="animHolder" id="addIntro">
+        <lottie :options="addInOptions" v-on:animCreated="handleAnimationAdd" />
+      </div>
+      <div class="animHolder" id="addConst">
+        <lottie :options="addConstOptions" v-on:animCreated="handleAnimationAddC" />
+      </div>
       <div class="animHolder" id="intro">
         <lottie :options="inOptions" v-on:animCreated="handleAnimation" />
       </div>
@@ -19,6 +25,9 @@ import Lottie from "./lottie.vue";
 import * as inData from "../assets/animations/oneIn.json";
 import * as constData from "../assets/animations/oneConst.json";
 import * as outData from "../assets/animations/oneOut.json";
+import * as additionInData from "../assets/animations/oneAddIn.json";
+import * as additionConstData from "../assets/animations/oneAddConst.json";
+
 
 export default {
   name: "ChapterOne",
@@ -28,16 +37,36 @@ export default {
   data() {
     return {
       inOptions: { animationData: inData, loop: false, autoplay: false },
+      addInOptions: { animationData: additionInData, loop: false, autoplay: false },
       constOptions: { animationData: constData, loop: true, autoplay: false },
+      addConstOptions: { animationData: additionConstData, loop: true, autoplay: false },
       outOptions: { animationData: outData, loop: false, autoplay: false },
       animIn: null,
       animConst: null,
       animOut: null,
+      animAddIn: null,
+      animAddConst: null,
       divOpacity: 0,
       animationSpeed: 1
     };
   },
   methods: {
+    handleAnimationAdd: function(anim) {
+      this.animAddIn = anim;
+      this.animAddIn.play();
+    },
+
+    handleAnimationAddC: function(anim) {
+      this.animAddConst = anim;
+      var holderAddConst = this.animAddConst;
+      var holderAddIn = this.animAddIn;
+      this.animAddIn.addEventListener("complete", function() {
+        document.getElementById("addConst").style.opacity = "1";
+        holderAddConst.play();
+        holderAddIn.destroy();
+      });
+    },
+
     handleAnimation: function(anim) {
       this.animIn = anim;
       this.animIn.play();
@@ -83,6 +112,7 @@ export default {
       holderLeaving.playSpeed = 10;
       holderOut.playSpeed = 0.5;
       this.$data.animConst.addEventListener("loopComplete", function() {
+        document.getElementById("addConst").classList.add("addOut");
         document.getElementById("outHolder").style.opacity = "1";
         holderOut.play();
         holderLeaving.destroy();
@@ -116,7 +146,18 @@ h1 {
 
 #in,
 #const,
-#outHolder {
+#outHolder,
+#addConst {
   opacity: 0;
+}
+
+.addOut {
+  margin-top: 100vh;
+  -ms-transform: rotate(210deg);
+  -webkit-transform: rotate(210deg);
+  transform: rotate(210deg);
+  -webkit-transition: -webkit-transform 1s ease-in-out, margin-top 1s ease-in-out;
+  -ms-transition: -ms-transform 1s ease-in-out, margin-top 1s ease-in-out;
+  transition: transform 1s ease-in-out, margin-top 1s ease-in-out;
 }
 </style>

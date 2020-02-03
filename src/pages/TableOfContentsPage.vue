@@ -8,7 +8,7 @@
         <p>Приобрести книгу</p>
       </div>
       <div class="table-of-contents-item">
-        <p>Описание</p>
+        <p>Биография</p>
       </div>
     </div>
   </div>

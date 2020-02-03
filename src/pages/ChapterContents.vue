@@ -5,7 +5,7 @@
     </div>
     <div class="chapter-one-container">
       <div class="container-grid">
-        <pre class="poem-item" v-for="(poem, index) in currentChapter.poems" v-bind:key="index"><span>{{++index}}</span>{{poem}}</pre>
+        <pre class="poem-item" v-for="(poem, index) in currentChapter.poems" v-bind:key="index"><span id="poemNum">{{++index}}</span><span class="poemName">{{poem}}</span></pre>
       </div>
     </div>
     <div class="button-wrapper">
@@ -71,10 +71,12 @@ export default {
   text-align: center;
 }
 
-.poem-item:hover {
-  background-size: contain;
-  background-repeat: no-repeat;
+.poemName:hover {
   background-image: url(~@/assets/images/vector-poem.svg);
+  background-position: center top;
+  background-size: 100% 20px;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .button-wrapper {
@@ -123,7 +125,7 @@ export default {
   font-size: calc(0.5em + 0.5vw);
 }
 
-span {
+#poemNum {
   padding-right: 2vw;
 }
 
@@ -172,7 +174,7 @@ span {
     font-size: calc(0.8em + 0.5vw);
   }
 
-  span {
+  #poemNum {
     color: #828282;
   }
 }

@@ -36,8 +36,8 @@ export default {
 
 .footer-item {
   margin: auto 0;
-  z-index: 3;
   position: relative;
+  z-index: 10;
   cursor: pointer;
 }
 
@@ -57,6 +57,7 @@ export default {
   height: 48px;
   line-height: 48px;
   text-align: center;
+  z-index: 10;
 }
 
 .item3 {
@@ -74,14 +75,18 @@ export default {
   margin-bottom: 68px;
   text-transform: uppercase;
   color: #ffffff;
+  z-index: 3;
 }
 
 @media screen and (max-width: 768px) {
+  #footer-container {
+    margin-top: 24px;
+  }
   .item1 {
-    margin-left: 60px;
+    margin-left: 30px;
   }
   .item3 {
-    margin-right: 60px;
+    margin-right: 30px;
   }
 
 }

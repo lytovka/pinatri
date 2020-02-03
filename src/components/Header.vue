@@ -55,17 +55,31 @@ export default {
   background-image: url(~@/assets/images/book_icon.svg);
 }
 
-@media screen and (max-width: 768px) {
+#header-title {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 0.29em;
+  text-transform: uppercase;
 
+  color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  #header-container {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
   .item1 {
-    margin-left: 60px; 
+    margin-left: 30px; 
   }
   .item2 {
     width: 224px;
     height: 38px;
   }
   .item3 {
-    margin-right: 60px;
+    margin-right: 30px;
   }
 
 }
@@ -87,16 +101,5 @@ export default {
     margin-right: 20px;
   }
 
-}
-
-#header-title {
-  position: relative;
-  z-index: 3;
-  text-align: center;
-  font-size: 32px;
-  letter-spacing: 0.29em;
-  text-transform: uppercase;
-
-  color: #ffffff;
 }
 </style>
