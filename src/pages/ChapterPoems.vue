@@ -55,33 +55,38 @@ export default {
     background-image: url(~@/assets/images/asterisk.svg);
   }
   /* separate chapter num svg for each of the chpaters */
-  .number1 {
-    background-image: url(~@/assets/images/chapter-one-title.svg);
-  }
-  .number2 {
-    background-image: url(~@/assets/images/chapter-two-title.svg);
-  }
-  .number3 {
-    background-image: url(~@/assets/images/chapter-three-title.svg);
-  }
-  .number4 {
-    background-image: url(~@/assets/images/chapter-four-title.svg);
-  }
-  .number5 {
-    background-image: url(~@/assets/images/chapter-five-title.svg);
-  }
-  .number6 {
-    background-image: url(~@/assets/images/chapter-six-title.svg);
-  }
-  .number7 {
-    background-image: url(~@/assets/images/chapter-seven-title.svg);
-  }
-  .number8 {
-    background-image: url(~@/assets/images/chapter-eight-title.svg);
-  }
-  .number9 {
-    background-image: url(~@/assets/images/chapter-nine-title.svg);
-  }
+        .number1 {
+          background-image: url(~@/assets/images/chapter-one-title.svg);
+        }
+        .number2 {
+          background-image: url(~@/assets/images/chapter-two-title.svg);
+        }
+        .number3 {
+          background-image: url(~@/assets/images/chapter-three-title.svg);
+        }
+        .number4 {
+          background-image: url(~@/assets/images/chapter-four-title.svg);
+          height: 77.77px;
+        }
+        .number5 {
+          background-image: url(~@/assets/images/chapter-five-title.svg);
+        }
+        .number6 {
+          background-image: url(~@/assets/images/chapter-six-title.svg);
+          height: 64.55px;
+        }
+        .number7 {
+          background-image: url(~@/assets/images/chapter-seven-title.svg);
+          height: 72.33px;
+        }
+        .number8 {
+          background-image: url(~@/assets/images/chapter-eight-title.svg);
+          height: 73.1px;
+        }
+        .number9 {
+          background-image: url(~@/assets/images/chapter-nine-title.svg);
+          height: 67.66px;
+        }
 
 /* CHAPTER TITLE */
   #chapter-title {
@@ -103,48 +108,47 @@ export default {
     background-position: center;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 2;
+    z-index: 3;
   }
         .main-svg1 {
           background-image: url(~@/assets/images/main-svg-chapter-one.svg);
           width: 16vw;
           height: 25vw;
         }
-
         .main-svg2 {
           background-image: url(~@/assets/images/main-svg-chapter-two.svg);
-          width: 51%;
-          height: 60%;
+          width: 35.29vw;
+          height: 21.55vw;
         }
-
         .main-svg3 {
-          background-image: url(~@/assets/images/main-svg-chapter-three.png);
-          width: 18%;
-          height: 60%;
+          background-image: url(~@/assets/images/main-svg-chapter-three.svg);
+          width: 15vw;
+          height: 17.33vw;
+          margin-top: 5vw;
         }
-
         .main-svg4 {
-          background-image: url(~@/assets/images/main-svg-chapter-4.png);
-          width: 51%;
-          height: 60%;
+          background-image: url(~@/assets/images/main-svg-chapter-four.svg);
+          width: 15vw;
+          height: 16.625vw;
+          margin-top: 5vw;
         }
-
         .main-svg5 {
-          background-image: url(~@/assets/images/main-svg-chapter-5.png);
-          width: 51%;
-          height: 60%;
+          background-image: url(~@/assets/images/main-svg-chapter-five.svg);
+          width: 20vw;
+          height: 16.76vw;
+          margin-top: 6vw;
         }
 
         .main-svg6 {
           background-image: url(~@/assets/images/main-svg-chapter-six.svg);
-          width: 22%;
-          height: 60%;
+          width: 19vw;
+          height: 20.75vw;
+          margin-top: 5vw;
         }
 
         .main-svg7 {
           background-image: url(~@/assets/images/main-svg-chapter-seven.svg);
-          width: 51%;
-          height: 60%;
+
         }
 
         .main-svg8 {
@@ -190,48 +194,56 @@ export default {
         }
         .secondary-svg2-2 {
           background-image: url(~@/assets/images/secondary-svg-chapter-2-two.svg);
+          right: -5vw;
         }
         .secondary-svg3-1 {
           background-image: url(~@/assets/images/secondary-svg-chapter-3-one-two.svg);
         }
         .secondary-svg3-2 {
           background-image: url(~@/assets/images/secondary-svg-chapter-3-one-two.svg);
+          right: -5vw;
         }
         .secondary-svg4-1 {
-          background-image: url(~@/assets/images/secondary-svg-chapter-4-one-two.svg);
+          background-image: url(~@/assets/images/secondary-svg-chapter-4-one.svg);
         }
         .secondary-svg4-2 {
-          background-image: url(~@/assets/images/secondary-svg-chapter-4-one-two.svg);
+          background-image: url(~@/assets/images/secondary-svg-chapter-4-two.svg);
+          right: -3vw;
         }
         .secondary-svg5-1 {
-          background-image: url(~@/assets/images/secondary-svg-chapter-5-one-two.svg);
+          background-image: url(~@/assets/images/secondary-svg-chapter-5-one.svg);
         }
         .secondary-svg5-2 {
-          background-image: url(~@/assets/images/secondary-svg-chapter-5-one-two.svg);
+          background-image: url(~@/assets/images/secondary-svg-chapter-5-two.svg);
+          right: -3vw;
         }
         .secondary-svg6-1 {
-          background-image: url(~@/assets/images/secondary-svg-chapter-6-one-two.svg);
+          background-image: url(~@/assets/images/secondary-svg-chapter-6-one.svg);
         }
         .secondary-svg6-2 {
-          background-image: url(~@/assets/images/secondary-svg-chapter-6-one-two.svg);
+          background-image: url(~@/assets/images/secondary-svg-chapter-6-two.svg);
+          right: -3vw;
         }
         .secondary-svg7-1 {
-          background-image: url(~@/assets/images/secondary-svg-chapter-7-one-two.svg);
+          background-image: url(~@/assets/images/secondary-svg-chapter-7-one.svg);
         }
         .secondary-svg7-2 {
-          background-image: url(~@/assets/images/secondary-svg-chapter-7-one-two.svg);
+          background-image: url(~@/assets/images/secondary-svg-chapter-7-two.svg);
+          right: -5vw;
         }
         .secondary-svg8-1 {
-          background-image: url(~@/assets/images/secondary-svg-chapter-8-one-two.svg);
+          background-image: url(~@/assets/images/secondary-svg-chapter-8-one.svg);
         }
         .secondary-svg8-2 {
-          background-image: url(~@/assets/images/secondary-svg-chapter-8-one-two.svg);
+          background-image: url(~@/assets/images/secondary-svg-chapter-8-two.svg);
+          right: -3vw;
         }
         .secondary-svg9-1 {
-          background-image: url(~@/assets/images/secondary-svg-chapter-9-one-two.svg);
+          background-image: url(~@/assets/images/secondary-svg-chapter-9-one.svg);
         }
         .secondary-svg9-2 {
-          background-image: url(~@/assets/images/secondary-svg-chapter-9-one-two.svg);
+          background-image: url(~@/assets/images/secondary-svg-chapter-9-two.svg);
+          right: -3vw;
         }
 
 @media screen and (max-width: 1200px) {
@@ -242,6 +254,18 @@ export default {
     width: 19.2vw;
     height: 30vw;
   }
+  .main-svg3 {
+    width: 20vw;
+    height: 23.1vw;
+  }
+  .main-svg5 {
+    width: 24vw;
+    height: 20.12vw;
+    margin-top: 8vw;
+  }
+  .main-svg6 {
+    margin-top: 7vw;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -250,6 +274,19 @@ export default {
 @media screen and (max-width: 768px) {
   #chapter-title {
     font-size: 9vw;
+  }
+  .main-svg3 {
+    width: 22vw;
+    height: 25.42vw;
+  }
+  .main-svg4 {
+    width: 21vw;
+    height: 23.275vw;
+  }
+  .main-svg6{ 
+    width: 22vw;
+    height: 24.03vw;
+    margin-top: 9vw;
   }
 }
 
@@ -260,6 +297,27 @@ export default {
   .main-svg1 {
     width: 32vw;
     height: 50vw;
+  }
+  .main-svg2 {
+    width: 50vw;
+    height: 30.53vw;
+  }
+  .main-svg3 {
+    width: 24vw;
+    height: 27.73vw;
+  }
+  .main-svg4 {
+    margin-top: 6.5vw;
+  }
+  .main-svg5{
+    width: 32vw;
+    height: 26.82vw;
+    margin-top: 14vw;
+  }
+  .main-svg6{ 
+    width: 24vw;
+    height: 26.21vw;
+    margin-top: 9vw;
   }
 }
 

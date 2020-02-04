@@ -34,7 +34,7 @@ export default {
                 id: "/chapter-three",
                 number: "3",
                 name: "моё богатство — люди",
-                nameGrand: "моё богатство -<br>люди",
+                nameGrand: "моё<br>богатство -<br>люди",
                 poems: ["Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum", "Lopem ipsum"]
 
             },
