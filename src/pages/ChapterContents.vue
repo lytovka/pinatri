@@ -131,6 +131,7 @@ button {
 
 #poemNum {
   padding-right: 2vw;
+  font-family: lighthaus;
 }
 
 @media screen and (max-width: 1200px) {

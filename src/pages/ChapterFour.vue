@@ -1,6 +1,18 @@
 <template>
   <div>
     <div style="position: absolute; width: 100%; height: 100%; left: 0%; top: 0%">
+    <div class="sideHolder left" id="leftIn">
+      <lottie :options="sideInOptions" v-on:animCreated="handleSideInLeft" />
+    </div>
+    <div class="sideHolder right" id="rightIn">
+      <lottie :options="sideInOptions" v-on:animCreated="handleSideInRight" />
+    </div>
+    <div class="sideHolder left sideConst" id="leftConst">
+      <lottie :options="sideConstOptions" v-on:animCreated="handleSideConstLeft" />
+    </div>
+    <div class="sideHolder right sideConst" id="rightConst">
+      <lottie :options="sideConstOptions" v-on:animCreated="handleSideConstRight" />
+    </div>
       <div class="animHolder" id="intro">
         <lottie :options="inOptions" v-on:animCreated="handleAnimation" />
       </div>
@@ -19,6 +31,8 @@ import Lottie from "./lottie.vue";
 import * as inData from "../assets/animations/fourIn.json";
 import * as constData from "../assets/animations/fourConst.json";
 import * as outData from "../assets/animations/fourOut.json";
+import * as sideInData from "../assets/animations/fourSideIn.json";
+import * as sideConstData from "../assets/animations/fourSideConst.json";
 
 export default {
   name: "ChapterSix",
@@ -31,14 +45,49 @@ export default {
       inOptions: { animationData: inData, loop: false, autoplay: false },
       constOptions: { animationData: constData, loop: true, autoplay: false },
       outOptions: { animationData: outData, loop: false, autoplay: false },
+      sideInOptions: { animationData: sideInData, loop: false, autoplay: false },
+      sideConstOptions: { animationData: sideConstData, loop: true, autoplay: false },
       animIn: null,
       animConst: null,
       animOut: null,
+      sideInL: null,
+      sideInR: null,
+      sideConstL: null,
+      sideConstR: null,
       divOpacity: 0,
       animationSpeed: 1
     };
   },
   methods: {
+    handleSideInLeft: function(anim) {
+      this.sideInL = anim;
+      this.sideInL.play();
+    },
+    handleSideInRight: function(anim) {
+      this.sideInR = anim;
+      this.sideInR.play();
+    },
+    handleSideConstLeft: function(anim) {
+      this.sideConstL = anim;
+      var holderSideConstL = this.sideConstL;
+      var holderSideInL = this.sideInL;
+      this.sideInL.addEventListener("complete", function() {
+        document.getElementById("leftConst").style.opacity = "1";
+        holderSideConstL.play();
+        holderSideInL.destroy();
+      });
+    },
+    handleSideConstRight: function(anim) {
+      this.sideConstR = anim;
+      var holderSideConstR = this.sideConstR;
+      var holderSideInR = this.sideInR;
+      this.sideInR.addEventListener("complete", function() {
+        document.getElementById("rightConst").style.opacity = "1";
+        holderSideConstR.play();
+        holderSideInR.destroy();
+      });
+    },
+
     handleAnimation: function(anim) {
       this.animIn = anim;
       this.animIn.play();
@@ -85,6 +134,8 @@ export default {
       holderOut.playSpeed = 0.5;
       this.$data.animConst.addEventListener("loopComplete", function() {
         document.getElementById("outHolder").style.opacity = "1";
+        document.getElementById("leftConst").classList.add("sideOut");
+        document.getElementById("rightConst").classList.add("sideOut");
         holderOut.play();
         holderLeaving.destroy();
       });
@@ -117,7 +168,30 @@ h1 {
 
 #in,
 #const,
-#outHolder {
+#outHolder,
+#leftConst,
+#rightConst {
   opacity: 0;
+}
+
+.sideHolder {
+  z-index: 2;
+  width: 8vw;
+  height: 8vw;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.left {
+  right: 75%;
+}
+.right {
+  left: 75%;
+}
+.sideOut {
+  width: 0vw;
+  height: 0vw;
+  transition: width 0.6s ease-in-out, height 0.6s ease-in-out;
 }
 </style>

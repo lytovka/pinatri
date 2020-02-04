@@ -57,7 +57,7 @@ export default {
   width: 34vw;
   max-width: 450px;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 60px;
 }
 
 .chapter-poem-wrapper p {
@@ -191,18 +191,22 @@ export default {
 
 .main-svg7 {
   background-image: url(~@/assets/images/main-svg-chapter-seven.svg);
+  width: 10.64vw;
+  height: 22vw;
+  margin-top: 3vw;
 }
 
 .main-svg8 {
   background-image: url(~@/assets/images/main-svg-chapter-eight.svg);
-  width: 51%;
-  height: 33%;
+  width: 23vw;
+  height: 16.9vw;
 }
 
 .main-svg9 {
   background-image: url(~@/assets/images/main-svg-chapter-nine.svg);
-  width: 40%;
-  height: 33%;
+  width: 20vw;
+  height: 20.2vw;
+  margin-top: -2vw;
 }
 
 /* SECONDARY SVG SET */
@@ -308,6 +312,10 @@ export default {
   .main-svg6 {
     margin-top: 7vw;
   }
+  .main-svg7 {
+    width: 12.58vw;
+    height: 26vw;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -330,11 +338,19 @@ export default {
     height: 24.03vw;
     margin-top: 9vw;
   }
+  .main-svg7 {
+    width: 14vw;
+    height: 29vw;
+  }
+  .main-svg9 {
+    width: 30vw;
+    height: 30.3vw;
+  }
 }
 
 @media screen and (max-width: 590px) {
   #chapter-title {
-    font-size: 11vw;
+    font-size: 10vw;
   }
   .main-svg1 {
     width: 32vw;
@@ -372,6 +388,9 @@ export default {
   }
   .holder {
     transform: translateY(-62px);
+  }
+  .main-svg {
+    visibility: hidden;
   }
   .svg-left {
     top: 140px;
