@@ -40,6 +40,12 @@ export default {
       this.$route.fullPath.startsWith(c.id)
     );
     console.log("current chapter", this.currentChapter);
+  },
+  beforeRouteLeave(to, from, next){
+    if(to.name === "TableOfContentsPage"){
+      this.$store.dispatch("updateLastRoute", from.path);
+    }
+    next();
   }
 };
 </script>

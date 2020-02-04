@@ -86,10 +86,7 @@ export default {
       this.$store.dispatch("changePageStatus", true);
     } else if (to.name === "TableOfContentsPage") {
       this.$store.dispatch("updateLastRoute", "/chapter-seven");
-    } else if (to.path.includes("-poems")) {
-      const newRoute = to.path.split("-");
-      this.$store.dispatch("updateLastRoute", `${newRoute[0]}-${newRoute[1]}`);
-    }
+    } 
   }
 };
 </script>
