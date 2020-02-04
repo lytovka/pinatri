@@ -72,4 +72,14 @@ body {
   font-family: "lighthaus";
   src: url(~@/assets/fonts/lighthaus.otf);
 }
+
+@font-face {
+  font-family: "wremena";
+  src: url(~@/assets/fonts/wremena_regular.otf);
+}
+
+@font-face {
+  font-family: "wremena_light";
+  src: url(~@/assets/fonts/wremena_light.otf);
+}
 </style>

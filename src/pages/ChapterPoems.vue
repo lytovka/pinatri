@@ -14,10 +14,12 @@
       v-for="(poemContent, index) in currentChapter.poemsContent"
       v-bind:key="index"
     >
-      <p class="chapter-poem-number">/0{{++index}}</p>
-      <p class="chapter-poem-title" v-html="poemContent.title"></p>
-      <p class="chapter-poem-body" v-html="poemContent.body"></p>
-      <p class="chapter-poem-date">29.01.2001</p>
+      <div class="chapter-poem-container">
+        <p class="chapter-poem-number" style="color: #828282; font-size: 20px ">/0{{++index}}</p>
+        <p class="chapter-poem-title" v-html="poemContent.title"></p>
+        <p class="chapter-poem-body" v-html="poemContent.body"></p>
+        <p class="chapter-poem-date" style="color: #828282; font-size:10px">29.01.2001</p>
+      </div>
     </div>
   </div>
 </template>
@@ -43,35 +45,30 @@ export default {
 </script>
 
 <style scoped>
-pre {
-  color: red;
-}
-
-.chapter-poem-body {
-}
 
 .chapter-poem-wrapper {
-  width: 300px;
+  min-width: 280px;
+  width: 34vw;
+  max-width: 450px;
   margin: 0 auto;
-  margin-top: 10%;
-}
-
-.chapter-poem-number {
-  color: #828282;
-}
-
-.chapter-poem-title {
-  margin: 30px 0;
+  margin-top: 30px;
 }
 
 .chapter-poem-wrapper p {
   color: white;
 }
 
-.chapter-poem-date {
-  font-size: 10px;
-  color: #828282;
+.chapter-poem-title {
+  margin: 30px 0;
+  font-size: 22px;
 }
+
+.chapter-poem-body {
+  font-size: calc(10px + 0.35vw + 0.8vmin);
+  font-family: "wremena_light";
+}
+
+
 
 /* CHAPTER NUM AND ASTERISK*/
 .poem-chapter-container {
@@ -358,6 +355,9 @@ pre {
     height: 26.21vw;
     margin-top: 9vw;
   }
+  .chapter-poem-body {
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -366,6 +366,12 @@ pre {
   }
   .holder {
     transform: translateY(-62px);
+  }
+  .svg-left {
+    top: 140px;
+  }
+  .svg-right {
+    top: 80px;
   }
 }
 </style>
