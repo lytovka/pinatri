@@ -26,8 +26,6 @@ export default {
     lottie: Lottie
   },
 
-
-
   data() {
     return {
       inOptions: { animationData: inData, loop: false, autoplay: false },
@@ -74,7 +72,7 @@ export default {
 
     console.log("animation", this.$data.animOut);
     console.log("animation", this.$data.animConst);
-    
+
     if (to.name === "TableOfContentsPage" || to.name === "ChapterPoems") {
       this.$data.animConst.destroy();
       next();
@@ -101,6 +99,9 @@ export default {
       this.$store.dispatch("changePageStatus", true);
     } else if (to.name === "TableOfContentsPage") {
       this.$store.dispatch("updateLastRoute", "/chapter-four");
+    } else if (to.path.includes("-poems")) {
+      const newRoute = to.path.split("-");
+      this.$store.dispatch("updateLastRoute", `${newRoute[0]}-${newRoute[1]}`);
     }
   }
 };

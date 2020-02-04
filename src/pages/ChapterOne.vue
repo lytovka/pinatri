@@ -28,7 +28,6 @@ import * as outData from "../assets/animations/oneOut.json";
 import * as additionInData from "../assets/animations/oneAddIn.json";
 import * as additionConstData from "../assets/animations/oneAddConst.json";
 
-
 export default {
   name: "ChapterOne",
   components: {
@@ -37,9 +36,17 @@ export default {
   data() {
     return {
       inOptions: { animationData: inData, loop: false, autoplay: false },
-      addInOptions: { animationData: additionInData, loop: false, autoplay: false },
+      addInOptions: {
+        animationData: additionInData,
+        loop: false,
+        autoplay: false
+      },
       constOptions: { animationData: constData, loop: true, autoplay: false },
-      addConstOptions: { animationData: additionConstData, loop: true, autoplay: false },
+      addConstOptions: {
+        animationData: additionConstData,
+        loop: true,
+        autoplay: false
+      },
       outOptions: { animationData: outData, loop: false, autoplay: false },
       animIn: null,
       animConst: null,
@@ -100,13 +107,12 @@ export default {
 
     console.log("animation", this.$data.animOut);
     console.log("animation", this.$data.animConst);
-    
+
     if (to.name === "TableOfContentsPage" || to.name === "ChapterPoems") {
       this.$data.animConst.destroy();
       next();
     } else {
       this.$store.dispatch("changeAnimationStatus", true);
-
       var holderLeaving = this.$data.animConst;
       var holderOut = this.$data.animOut;
       holderLeaving.playSpeed = 10;
@@ -128,6 +134,10 @@ export default {
       this.$store.dispatch("changePageStatus", true);
     } else if (to.name === "TableOfContentsPage") {
       this.$store.dispatch("updateLastRoute", "/chapter-one");
+    }
+    else if(to.path.includes("-poems")){
+        const newRoute = to.path.split('-');
+        this.$store.dispatch("updateLastRoute", `${newRoute[0]}-${newRoute[1]}`);
     }
   }
 };
@@ -156,7 +166,8 @@ h1 {
   -ms-transform: rotate(210deg);
   -webkit-transform: rotate(210deg);
   transform: rotate(210deg);
-  -webkit-transition: -webkit-transform 1s ease-in-out, margin-top 1s ease-in-out;
+  -webkit-transition: -webkit-transform 1s ease-in-out,
+    margin-top 1s ease-in-out;
   -ms-transition: -ms-transform 1s ease-in-out, margin-top 1s ease-in-out;
   transition: transform 1s ease-in-out, margin-top 1s ease-in-out;
 }

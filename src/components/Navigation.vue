@@ -58,10 +58,10 @@
             <transition v-on:enter="enter" v-on:leave="leave" v-bind:css="false">
               <animate
                 v-if="this.$store.getters.isPageCalled"
-                attributeName="startOffset"
+                attributeName="x1"
                 from="0%"
                 to="50%"
-                dur="100s"
+                dur="50s"
                 repeatCount="indefinite"
               />
             </transition>
